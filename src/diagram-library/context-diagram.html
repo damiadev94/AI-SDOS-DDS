@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Context Diagram — shows a system in its environment with external actors and systems.">
+  <title>Context Diagram — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+  <div class="dds-shell">
+
+    <!-- HEADER -->
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="/" class="dds-header__brand">DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="#" class="dds-header__nav-link" aria-current="page">Diagrams</a>
+          <a href="#" class="dds-header__nav-link">Documentation</a>
+          <a href="#" class="dds-header__nav-link">Reference</a>
+        </nav>
+      </header>
+    </div>
+
+    <!-- HERO -->
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Context Diagram</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Shows a system in its environment: the people who use it, the external systems it interacts with, and the data that flows between them.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Structural</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="dds-shell__main">
+      <div class="dds-main">
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <!-- DIAGRAM PANEL -->
+          <section id="diagram-panel">
+            <article class="dds-card dds-diagram-panel">
+              <header class="dds-diagram-panel__header">
+                <h2 class="text-h4">Context Diagram</h2>
+                <span class="dds-badge dds-badge--neutral">Structural</span>
+              </header>
+
+              <div class="dds-diagram-panel__body mt-md">
+                <div class="dds-diagram">
+                  <div class="dds-diagram__canvas" style="min-height:360px; position:relative; padding:var(--spacing-md);">
+
+                    <!-- Top actors -->
+                    <div class="dds-node" style="position:absolute; top:20px; left:60px; width:130px;">
+                      <span class="dds-node__label">End User</span>
+                      <span class="dds-node__description">Person</span>
+                    </div>
+                    <div class="dds-node" style="position:absolute; top:20px; left:510px; width:130px;">
+                      <span class="dds-node__label">Admin User</span>
+                      <span class="dds-node__description">Person</span>
+                    </div>
+
+                    <!-- Central system -->
+                    <div class="dds-node dds-node--primary" style="position:absolute; top:140px; left:280px; width:140px;">
+                      <span class="dds-node__label">Web Platform</span>
+                      <span class="dds-node__description">System</span>
+                    </div>
+
+                    <!-- Bottom external systems -->
+                    <div class="dds-node" style="position:absolute; top:284px; left:60px; width:140px;">
+                      <span class="dds-node__label">Payment Service</span>
+                      <span class="dds-node__description">External System</span>
+                    </div>
+                    <div class="dds-node" style="position:absolute; top:284px; left:500px; width:140px;">
+                      <span class="dds-node__label">Email Service</span>
+                      <span class="dds-node__description">External System</span>
+                    </div>
+
+                    <svg class="dds-diagram__svg" aria-hidden="true">
+                      <defs>
+                        <marker id="arrow-ctx" viewBox="0 0 10 10" refX="8" refY="5"
+                                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                          <path class="dds-arrow" d="M0,0 L10,5 L0,10 z"></path>
+                        </marker>
+                        <marker id="arrow-ctx-primary" viewBox="0 0 10 10" refX="8" refY="5"
+                                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                          <path class="dds-arrow dds-arrow--primary" d="M0,0 L10,5 L0,10 z"></path>
+                        </marker>
+                      </defs>
+                      <!-- End User → Web Platform -->
+                      <path class="dds-connector dds-connector--primary" d="M 125,76 L 295,140" marker-end="url(#arrow-ctx-primary)"/>
+                      <!-- Admin User → Web Platform -->
+                      <path class="dds-connector dds-connector--primary" d="M 575,76 L 420,140" marker-end="url(#arrow-ctx-primary)"/>
+                      <!-- Web Platform → Payment Service -->
+                      <path class="dds-connector" d="M 295,196 L 200,284" marker-end="url(#arrow-ctx)"/>
+                      <!-- Web Platform → Email Service -->
+                      <path class="dds-connector" d="M 405,196 L 510,284" marker-end="url(#arrow-ctx)"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="dds-diagram-panel__legend mt-md" aria-label="Diagram legend">
+                <aside class="dds-legend">
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-primary"></span>
+                    <span class="text-small">Core System</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch border"></span>
+                    <span class="text-small">External Actor / System</span>
+                  </div>
+                </aside>
+              </aside>
+
+              <footer class="dds-diagram-panel__notes mt-md">
+                <p class="text-small text-secondary">Arrows indicate the direction of primary interaction or data flow. The core system is the single subject of this diagram.</p>
+              </footer>
+            </article>
+          </section>
+
+          <!-- NOTES -->
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">A Context Diagram (also called a System Context Diagram) establishes the boundary of your system and shows everything outside it that interacts with it. It is the highest-level view — do not show internal structure here. Use it at the start of a project to align stakeholders on scope.</p>
+              </div>
+            </article>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+</body>
+</html>

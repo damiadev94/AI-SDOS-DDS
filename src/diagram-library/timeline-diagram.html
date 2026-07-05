@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Timeline Diagram — shows events ordered chronologically on a time axis.">
+  <title>Timeline Diagram — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+  <div class="dds-shell">
+
+    <!-- HEADER -->
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="/" class="dds-header__brand">DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="#" class="dds-header__nav-link" aria-current="page">Diagrams</a>
+          <a href="#" class="dds-header__nav-link">Documentation</a>
+          <a href="#" class="dds-header__nav-link">Reference</a>
+        </nav>
+      </header>
+    </div>
+
+    <!-- HERO -->
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Timeline Diagram</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Shows key events and milestones ordered chronologically — useful for project histories, release schedules, and sprint planning.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Project</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="dds-shell__main">
+      <div class="dds-main">
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <!-- DIAGRAM PANEL -->
+          <section id="diagram-panel">
+            <article class="dds-card dds-diagram-panel">
+              <header class="dds-diagram-panel__header">
+                <h2 class="text-h4">Timeline Diagram</h2>
+                <span class="dds-badge dds-badge--neutral">Project</span>
+              </header>
+
+              <div class="dds-diagram-panel__body mt-md">
+                <div class="dds-diagram">
+                  <div class="dds-diagram__canvas" style="display:flex; flex-direction:column; gap:var(--spacing-md); padding:var(--spacing-xl);">
+
+                    <!-- Event row: date badge + node -->
+                    <div style="display:flex; flex-direction:row; align-items:center; gap:var(--spacing-md);">
+                      <span class="dds-badge dds-badge--neutral" style="min-width:80px; text-align:center;">Q1 2025</span>
+                      <div class="dds-node dds-node--primary" style="flex:1;">
+                        <span class="dds-node__label">Project Kickoff</span>
+                        <span class="dds-node__description">Initial scope, team assembly, tooling setup</span>
+                      </div>
+                    </div>
+
+                    <div style="display:flex; flex-direction:row; align-items:center; gap:var(--spacing-md);">
+                      <span class="dds-badge dds-badge--success" style="min-width:80px; text-align:center;">Q2 2025</span>
+                      <div class="dds-node dds-node--success" style="flex:1;">
+                        <span class="dds-node__label">Foundation Complete</span>
+                        <span class="dds-node__description">Design tokens, base components, and layout system shipped</span>
+                      </div>
+                    </div>
+
+                    <div style="display:flex; flex-direction:row; align-items:center; gap:var(--spacing-md);">
+                      <span class="dds-badge dds-badge--success" style="min-width:80px; text-align:center;">Q3 2025</span>
+                      <div class="dds-node dds-node--success" style="flex:1;">
+                        <span class="dds-node__label">Library Released</span>
+                        <span class="dds-node__description">Component library and diagram framework published internally</span>
+                      </div>
+                    </div>
+
+                    <div style="display:flex; flex-direction:row; align-items:center; gap:var(--spacing-md);">
+                      <span class="dds-badge dds-badge--warning" style="min-width:80px; text-align:center;">Q4 2025</span>
+                      <div class="dds-node dds-node--warning" style="flex:1;">
+                        <span class="dds-node__label">Beta Launch</span>
+                        <span class="dds-node__description">Open beta — feedback collection and iteration cycle</span>
+                      </div>
+                    </div>
+
+                    <div style="display:flex; flex-direction:row; align-items:center; gap:var(--spacing-md);">
+                      <span class="dds-badge dds-badge--neutral" style="min-width:80px; text-align:center;">Q1 2026</span>
+                      <div class="dds-node" style="flex:1;">
+                        <span class="dds-node__label">v1.0 Release</span>
+                        <span class="dds-node__description">General availability — stable API and full documentation</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <aside class="dds-diagram-panel__legend mt-md" aria-label="Diagram legend">
+                <aside class="dds-legend">
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-primary"></span>
+                    <span class="text-small">Key Milestone</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-success"></span>
+                    <span class="text-small">Complete</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-warning"></span>
+                    <span class="text-small">In Progress</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch border"></span>
+                    <span class="text-small">Planned</span>
+                  </div>
+                </aside>
+              </aside>
+
+              <footer class="dds-diagram-panel__notes mt-md">
+                <p class="text-small text-secondary">Date badges use quarter notation. Node variant colour reflects the current status of each event. Planned events use the neutral (default) node style.</p>
+              </footer>
+            </article>
+          </section>
+
+          <!-- NOTES -->
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">Timeline Diagrams communicate project history and forward-looking plans at a glance. They are most effective when anchored to calendar dates rather than relative offsets. Keep the number of items manageable — if a quarter has many events, consider a separate sprint-level timeline for that period.</p>
+              </div>
+            </article>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+</body>
+</html>

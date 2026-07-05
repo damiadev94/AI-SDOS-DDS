@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sequence Diagram — shows interactions between participants ordered in time.">
+  <title>Sequence Diagram — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+  <div class="dds-shell">
+
+    <!-- HEADER -->
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="/" class="dds-header__brand">DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="#" class="dds-header__nav-link" aria-current="page">Diagrams</a>
+          <a href="#" class="dds-header__nav-link">Documentation</a>
+          <a href="#" class="dds-header__nav-link">Reference</a>
+        </nav>
+      </header>
+    </div>
+
+    <!-- HERO -->
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Sequence Diagram</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Shows how participants interact with each other in a specific scenario, ordered chronologically from top to bottom.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Behavioral</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="dds-shell__main">
+      <div class="dds-main">
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <!-- DIAGRAM PANEL -->
+          <section id="diagram-panel">
+            <article class="dds-card dds-diagram-panel">
+              <header class="dds-diagram-panel__header">
+                <h2 class="text-h4">Sequence Diagram</h2>
+                <span class="dds-badge dds-badge--neutral">Behavioral</span>
+              </header>
+
+              <div class="dds-diagram-panel__body mt-md">
+                <div class="dds-diagram">
+                  <div class="dds-diagram__canvas" style="display:flex; flex-direction:column; gap:var(--spacing-md); padding:var(--spacing-xl);">
+
+                    <!-- Lifeline headers -->
+                    <div style="display:flex; flex-direction:row; gap:var(--spacing-xl); justify-content:space-around;">
+                      <div class="dds-node" style="flex:1; text-align:center;">
+                        <span class="dds-node__label">Client</span>
+                        <span class="dds-node__description">Browser / App</span>
+                      </div>
+                      <div class="dds-node dds-node--primary" style="flex:1; text-align:center;">
+                        <span class="dds-node__label">API</span>
+                        <span class="dds-node__description">REST Server</span>
+                      </div>
+                      <div class="dds-node dds-node--success" style="flex:1; text-align:center;">
+                        <span class="dds-node__label">Database</span>
+                        <span class="dds-node__description">PostgreSQL</span>
+                      </div>
+                    </div>
+
+                    <!-- Messages -->
+                    <div class="dds-card mt-md" style="padding:var(--spacing-sm) var(--spacing-md);">
+                      <div style="display:flex; align-items:center; gap:var(--spacing-sm);">
+                        <span class="dds-badge dds-badge--neutral">1</span>
+                        <span class="text-small font-semibold">Client → API</span>
+                        <span class="text-small text-secondary">POST /api/resource — Send request with payload</span>
+                      </div>
+                    </div>
+
+                    <div class="dds-card" style="padding:var(--spacing-sm) var(--spacing-md);">
+                      <div style="display:flex; align-items:center; gap:var(--spacing-sm);">
+                        <span class="dds-badge dds-badge--neutral">2</span>
+                        <span class="text-small font-semibold">API → Database</span>
+                        <span class="text-small text-secondary">INSERT query — Persist validated data</span>
+                      </div>
+                    </div>
+
+                    <div class="dds-card" style="padding:var(--spacing-sm) var(--spacing-md);">
+                      <div style="display:flex; align-items:center; gap:var(--spacing-sm);">
+                        <span class="dds-badge dds-badge--success">3</span>
+                        <span class="text-small font-semibold">Database → API</span>
+                        <span class="text-small text-secondary">Result row — Return inserted record</span>
+                      </div>
+                    </div>
+
+                    <div class="dds-card" style="padding:var(--spacing-sm) var(--spacing-md);">
+                      <div style="display:flex; align-items:center; gap:var(--spacing-sm);">
+                        <span class="dds-badge dds-badge--success">4</span>
+                        <span class="text-small font-semibold">API → Client</span>
+                        <span class="text-small text-secondary">201 Created — Return new resource with ID</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <aside class="dds-diagram-panel__legend mt-md" aria-label="Diagram legend">
+                <aside class="dds-legend">
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-primary"></span>
+                    <span class="text-small">Primary Participant</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-success"></span>
+                    <span class="text-small">Data Store Participant</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch border"></span>
+                    <span class="text-small">External Participant</span>
+                  </div>
+                </aside>
+              </aside>
+
+              <footer class="dds-diagram-panel__notes mt-md">
+                <p class="text-small text-secondary">Messages are numbered in chronological order. Outgoing calls are shown with neutral badges; return messages use success badges.</p>
+              </footer>
+            </article>
+          </section>
+
+          <!-- NOTES -->
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">Sequence Diagrams are the standard way to document API contracts, integration flows, and authentication protocols. They capture the exact order of messages and which participant initiates each call. Model one scenario (happy path) per diagram; document error flows separately.</p>
+              </div>
+            </article>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+</body>
+</html>

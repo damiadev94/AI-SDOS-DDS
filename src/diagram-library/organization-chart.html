@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Organization Chart — shows hierarchical structure of roles, teams, or system components.">
+  <title>Organization Chart — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+  <div class="dds-shell">
+
+    <!-- HEADER -->
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="/" class="dds-header__brand">DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="#" class="dds-header__nav-link" aria-current="page">Diagrams</a>
+          <a href="#" class="dds-header__nav-link">Documentation</a>
+          <a href="#" class="dds-header__nav-link">Reference</a>
+        </nav>
+      </header>
+    </div>
+
+    <!-- HERO -->
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Organization Chart</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Shows the hierarchical structure of an organisation, team, or system — who reports to whom, and how roles are grouped.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Reference</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="dds-shell__main">
+      <div class="dds-main">
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <!-- DIAGRAM PANEL -->
+          <section id="diagram-panel">
+            <article class="dds-card dds-diagram-panel">
+              <header class="dds-diagram-panel__header">
+                <h2 class="text-h4">Organization Chart</h2>
+                <span class="dds-badge dds-badge--neutral">Reference</span>
+              </header>
+
+              <div class="dds-diagram-panel__body mt-md">
+                <div class="dds-diagram">
+                  <div class="dds-diagram__canvas" style="display:flex; flex-direction:column; gap:var(--spacing-xl); align-items:center; padding:var(--spacing-xl);">
+
+                    <!-- Level 1: Executive -->
+                    <div style="display:flex; flex-direction:row; justify-content:center;">
+                      <div class="dds-node dds-node--primary" style="min-width:160px; text-align:center;">
+                        <span class="dds-node__label">Chief Executive</span>
+                        <span class="dds-node__description">Executive leadership</span>
+                      </div>
+                    </div>
+
+                    <!-- Level 2: VPs -->
+                    <div style="display:flex; flex-direction:row; gap:var(--spacing-xl); justify-content:center;">
+                      <div class="dds-node" style="min-width:140px; text-align:center;">
+                        <span class="dds-node__label">VP Engineering</span>
+                        <span class="dds-node__description">Engineering division</span>
+                      </div>
+                      <div class="dds-node" style="min-width:140px; text-align:center;">
+                        <span class="dds-node__label">VP Product</span>
+                        <span class="dds-node__description">Product division</span>
+                      </div>
+                    </div>
+
+                    <!-- Level 3: Leads -->
+                    <div style="display:flex; flex-direction:row; gap:var(--spacing-md); justify-content:center; flex-wrap:wrap;">
+                      <div class="dds-node" style="min-width:130px; text-align:center;">
+                        <span class="dds-node__label">Frontend Lead</span>
+                        <span class="dds-node__description">UI & web</span>
+                      </div>
+                      <div class="dds-node" style="min-width:130px; text-align:center;">
+                        <span class="dds-node__label">Backend Lead</span>
+                        <span class="dds-node__description">APIs & data</span>
+                      </div>
+                      <div class="dds-node" style="min-width:130px; text-align:center;">
+                        <span class="dds-node__label">Design Lead</span>
+                        <span class="dds-node__description">UX & visual</span>
+                      </div>
+                      <div class="dds-node" style="min-width:130px; text-align:center;">
+                        <span class="dds-node__label">Research Lead</span>
+                        <span class="dds-node__description">User research</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <aside class="dds-diagram-panel__legend mt-md" aria-label="Diagram legend">
+                <aside class="dds-legend">
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-primary"></span>
+                    <span class="text-small">Executive</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch border"></span>
+                    <span class="text-small">Manager / Lead</span>
+                  </div>
+                </aside>
+              </aside>
+
+              <footer class="dds-diagram-panel__notes mt-md">
+                <p class="text-small text-secondary">Each level represents a tier in the reporting hierarchy. Top-to-bottom flow indicates seniority. Nodes at the same level share the same authority tier.</p>
+              </footer>
+            </article>
+          </section>
+
+          <!-- NOTES -->
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">Organization Charts are the standard reference for team structure, reporting lines, and ownership mapping. They are also used in software architecture to show component hierarchies, service ownership, and on-call escalation paths. Keep the chart current — stale org charts cause more confusion than having none.</p>
+              </div>
+            </article>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+</body>
+</html>

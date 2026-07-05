@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="State Diagram — shows all possible states of an object and the transitions between them.">
+  <title>State Diagram — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+  <div class="dds-shell">
+
+    <!-- HEADER -->
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="/" class="dds-header__brand">DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="#" class="dds-header__nav-link" aria-current="page">Diagrams</a>
+          <a href="#" class="dds-header__nav-link">Documentation</a>
+          <a href="#" class="dds-header__nav-link">Reference</a>
+        </nav>
+      </header>
+    </div>
+
+    <!-- HERO -->
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">State Diagram</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Shows all possible states of an entity and the transitions — triggered by events or conditions — that move it between those states.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Behavioral</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="dds-shell__main">
+      <div class="dds-main">
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <!-- DIAGRAM PANEL -->
+          <section id="diagram-panel">
+            <article class="dds-card dds-diagram-panel">
+              <header class="dds-diagram-panel__header">
+                <h2 class="text-h4">State Diagram — Document Lifecycle</h2>
+                <span class="dds-badge dds-badge--neutral">Behavioral</span>
+              </header>
+
+              <div class="dds-diagram-panel__body mt-md">
+                <div class="dds-diagram">
+                  <div class="dds-diagram__canvas" style="min-height:200px; position:relative; padding:var(--spacing-xl);">
+
+                    <!-- States in a row -->
+                    <div style="display:flex; flex-direction:row; gap:var(--spacing-lg); align-items:center; flex-wrap:wrap;">
+
+                      <div class="dds-node" style="flex:1; min-width:100px; text-align:center;">
+                        <span class="dds-node__label">Draft</span>
+                        <span class="dds-node__description">Initial State</span>
+                      </div>
+
+                      <div class="dds-node dds-node--warning" style="flex:1; min-width:110px; text-align:center;">
+                        <span class="dds-node__label">Under Review</span>
+                        <span class="dds-node__description">Review State</span>
+                      </div>
+
+                      <div class="dds-node dds-node--success" style="flex:1; min-width:100px; text-align:center;">
+                        <span class="dds-node__label">Approved</span>
+                        <span class="dds-node__description">Final State</span>
+                      </div>
+
+                      <div class="dds-node dds-node--error" style="flex:1; min-width:100px; text-align:center;">
+                        <span class="dds-node__label">Rejected</span>
+                        <span class="dds-node__description">Terminal State</span>
+                      </div>
+
+                      <div class="dds-node" style="flex:1; min-width:100px; text-align:center;">
+                        <span class="dds-node__label">Archived</span>
+                        <span class="dds-node__description">Archive State</span>
+                      </div>
+
+                    </div>
+
+                    <!-- Transition labels below states -->
+                    <div style="display:flex; flex-direction:row; gap:var(--spacing-lg); align-items:center; flex-wrap:wrap; margin-top:var(--spacing-md);">
+                      <span class="text-caption text-secondary" style="flex:1; text-align:center;">→ submit</span>
+                      <span class="text-caption text-secondary" style="flex:1; text-align:center;">→ approve / reject</span>
+                      <span class="text-caption text-secondary" style="flex:1; text-align:center;">→ archive</span>
+                      <span class="text-caption text-secondary" style="flex:1; text-align:center;">→ archive</span>
+                      <span class="text-caption text-secondary" style="flex:1; text-align:center;">(terminal)</span>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <aside class="dds-diagram-panel__legend mt-md" aria-label="Diagram legend">
+                <aside class="dds-legend">
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch border"></span>
+                    <span class="text-small">Neutral State</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-warning"></span>
+                    <span class="text-small">Intermediate / Review</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-success"></span>
+                    <span class="text-small">Approved / Complete</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-error"></span>
+                    <span class="text-small">Rejected / Blocked</span>
+                  </div>
+                </aside>
+              </aside>
+
+              <footer class="dds-diagram-panel__notes mt-md">
+                <p class="text-small text-secondary">Transitions are labelled with the event or guard that triggers them. Every state machine must have an initial state and at least one terminal state.</p>
+              </footer>
+            </article>
+          </section>
+
+          <!-- NOTES -->
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">State Diagrams are ideal for modelling entities with well-defined lifecycles: orders, documents, tickets, subscriptions. They make invalid transitions explicit, which helps teams implement correct status validation logic in code and database constraints.</p>
+              </div>
+            </article>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+</body>
+</html>

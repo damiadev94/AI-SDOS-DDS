@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Decision Tree — shows branching decision paths and their outcomes.">
+  <title>Decision Tree — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+  <div class="dds-shell">
+
+    <!-- HEADER -->
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="/" class="dds-header__brand">DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="#" class="dds-header__nav-link" aria-current="page">Diagrams</a>
+          <a href="#" class="dds-header__nav-link">Documentation</a>
+          <a href="#" class="dds-header__nav-link">Reference</a>
+        </nav>
+      </header>
+    </div>
+
+    <!-- HERO -->
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Decision Tree</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Shows a branching structure of decisions and their possible outcomes — useful for modelling logic, access control, and conditional workflows.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Behavioral</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="dds-shell__main">
+      <div class="dds-main">
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <!-- DIAGRAM PANEL -->
+          <section id="diagram-panel">
+            <article class="dds-card dds-diagram-panel">
+              <header class="dds-diagram-panel__header">
+                <h2 class="text-h4">Decision Tree — Access Control</h2>
+                <span class="dds-badge dds-badge--neutral">Behavioral</span>
+              </header>
+
+              <div class="dds-diagram-panel__body mt-md">
+                <div class="dds-diagram">
+                  <div class="dds-diagram__canvas" style="min-height:380px; position:relative; padding:var(--spacing-xl);">
+
+                    <!-- Level 1: Root decision — centered at x=350 for ~700px canvas -->
+                    <div class="dds-node dds-node--warning" style="position:absolute; top:10px; left:265px; width:180px;">
+                      <span class="dds-node__label">Is user authenticated?</span>
+                      <span class="dds-node__description">Decision</span>
+                    </div>
+
+                    <!-- Level 2 left: Yes branch -->
+                    <div class="dds-node dds-node--primary" style="position:absolute; top:140px; left:60px; width:150px;">
+                      <span class="dds-node__label">Check Permissions</span>
+                      <span class="dds-node__description">Role validation</span>
+                    </div>
+
+                    <!-- Level 2 right: No branch -->
+                    <div class="dds-node dds-node--error" style="position:absolute; top:140px; left:490px; width:150px;">
+                      <span class="dds-node__label">Redirect to Login</span>
+                      <span class="dds-node__description">Unauthenticated</span>
+                    </div>
+
+                    <!-- Level 3 left-left: Allow -->
+                    <div class="dds-node dds-node--success" style="position:absolute; top:300px; left:20px; width:130px;">
+                      <span class="dds-node__label">Allow Access</span>
+                      <span class="dds-node__description">Permission granted</span>
+                    </div>
+
+                    <!-- Level 3 left-right: Deny -->
+                    <div class="dds-node dds-node--error" style="position:absolute; top:300px; left:200px; width:130px;">
+                      <span class="dds-node__label">Deny Access</span>
+                      <span class="dds-node__description">Insufficient role</span>
+                    </div>
+
+                    <svg class="dds-diagram__svg" aria-hidden="true">
+                      <defs>
+                        <marker id="arrow-dtree" viewBox="0 0 10 10" refX="8" refY="5"
+                                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                          <path class="dds-arrow" d="M0,0 L10,5 L0,10 z"></path>
+                        </marker>
+                        <marker id="arrow-dtree-primary" viewBox="0 0 10 10" refX="8" refY="5"
+                                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                          <path class="dds-arrow dds-arrow--primary" d="M0,0 L10,5 L0,10 z"></path>
+                        </marker>
+                      </defs>
+                      <!-- Root (center x=355, bottom y=66) → Check Permissions (center x=135, top y=140) -->
+                      <path class="dds-connector dds-connector--primary" d="M 330,66 L 210,140" marker-end="url(#arrow-dtree-primary)"/>
+                      <text class="dds-diagram-label" x="245" y="112">Yes</text>
+
+                      <!-- Root (center x=355, bottom y=66) → Redirect (center x=565, top y=140) -->
+                      <path class="dds-connector" d="M 380,66 L 500,140" marker-end="url(#arrow-dtree)"/>
+                      <text class="dds-diagram-label" x="462" y="112">No</text>
+
+                      <!-- Check Permissions (center x=135, bottom y=196) → Allow (center x=85, top y=300) -->
+                      <path class="dds-connector dds-connector--primary" d="M 120,196 L 85,300" marker-end="url(#arrow-dtree-primary)"/>
+                      <text class="dds-diagram-label" x="85" y="258">Yes</text>
+
+                      <!-- Check Permissions (center x=135, bottom y=196) → Deny (center x=265, top y=300) -->
+                      <path class="dds-connector" d="M 170,196 L 265,300" marker-end="url(#arrow-dtree)"/>
+                      <text class="dds-diagram-label" x="228" y="258">No</text>
+                    </svg>
+
+                  </div>
+                </div>
+              </div>
+
+              <aside class="dds-diagram-panel__legend mt-md" aria-label="Diagram legend">
+                <aside class="dds-legend">
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-warning"></span>
+                    <span class="text-small">Decision Node</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-primary"></span>
+                    <span class="text-small">Process Node</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-success"></span>
+                    <span class="text-small">Allow / Accept</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-error"></span>
+                    <span class="text-small">Deny / Reject</span>
+                  </div>
+                </aside>
+              </aside>
+
+              <footer class="dds-diagram-panel__notes mt-md">
+                <p class="text-small text-secondary">Branch labels (Yes / No) indicate the condition under which each path is taken. Every leaf node is a terminal outcome.</p>
+              </footer>
+            </article>
+          </section>
+
+          <!-- NOTES -->
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">Decision Trees make conditional logic explicit and auditable. They are particularly useful for modelling access control policies, pricing rules, and routing logic. Each decision node should have exactly two branches (or a clearly defined set of mutually exclusive conditions).</p>
+              </div>
+            </article>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+</body>
+</html>
