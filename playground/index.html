@@ -329,5 +329,174 @@
     </div>
   </div>
 
+
+  <!-- =========================================================================
+       DIAGRAM FRAMEWORK
+       ========================================================================= -->
+
+  <!-- Title -->
+  <div class="pg-section">
+    <p class="pg-section__title">Diagram Framework — Title</p>
+    <h3 class="text-h4">Diagram Title</h3>
+  </div>
+
+  <!-- Canvas -->
+  <div class="pg-section">
+    <p class="pg-section__title">Diagram Framework — Canvas</p>
+    <div class="dds-diagram">
+      <div class="dds-diagram__canvas" style="min-height: 120px;">
+        <svg class="dds-diagram__svg" aria-hidden="true">
+          <defs></defs>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nodes -->
+  <div class="pg-section">
+    <p class="pg-section__title">Diagram Framework — Nodes</p>
+    <div class="pg-row">
+      <div class="dds-node">
+        <span class="dds-node__label">Default Node</span>
+        <span class="dds-node__description">No variant</span>
+      </div>
+      <div class="dds-node dds-node--primary">
+        <span class="dds-node__label">Primary Node</span>
+        <span class="dds-node__description">Primary variant</span>
+      </div>
+      <div class="dds-node dds-node--success">
+        <span class="dds-node__label">Success Node</span>
+        <span class="dds-node__description">Success variant</span>
+      </div>
+      <div class="dds-node dds-node--warning">
+        <span class="dds-node__label">Warning Node</span>
+        <span class="dds-node__description">Warning variant</span>
+      </div>
+      <div class="dds-node dds-node--error">
+        <span class="dds-node__label">Error Node</span>
+        <span class="dds-node__description">Error variant</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Groups -->
+  <div class="pg-section">
+    <p class="pg-section__title">Diagram Framework — Groups</p>
+    <div class="dds-group" style="max-width: 480px;">
+      <span class="dds-group__label">Group</span>
+      <div class="dds-group__content">
+        <div class="dds-node">
+          <span class="dds-node__label">Node A</span>
+        </div>
+        <div class="dds-node">
+          <span class="dds-node__label">Node B</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Connectors -->
+  <div class="pg-section">
+    <p class="pg-section__title">Diagram Framework — Connectors</p>
+    <svg aria-hidden="true" style="width: 100%; max-width: 320px; height: 140px;">
+      <defs>
+        <marker id="dds-arrow-default" viewBox="0 0 10 10" refX="8" refY="5"
+                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path class="dds-arrow" d="M0,0 L10,5 L0,10 z"></path>
+        </marker>
+      </defs>
+      <path class="dds-connector" d="M20,20 L260,20" marker-end="url(#dds-arrow-default)"></path>
+      <path class="dds-connector dds-connector--primary" d="M20,70 L260,70" marker-end="url(#dds-arrow-default)"></path>
+      <path class="dds-connector dds-connector--dashed" d="M20,120 L260,120"></path>
+    </svg>
+  </div>
+
+  <!-- Legend -->
+  <div class="pg-section">
+    <p class="pg-section__title">Diagram Framework — Legend</p>
+    <aside class="dds-legend" aria-label="Diagram legend" style="max-width: 480px;">
+      <div class="dds-legend__item">
+        <span class="dds-legend__swatch bg-primary" aria-hidden="true"></span>
+        <span>Primary System</span>
+      </div>
+      <div class="dds-legend__item">
+        <span class="dds-legend__swatch bg-success" aria-hidden="true"></span>
+        <span>Active Service</span>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Labels -->
+  <div class="pg-section">
+    <p class="pg-section__title">Diagram Framework — Labels</p>
+    <span class="dds-diagram-label-html">HTML Label</span>
+    <svg aria-hidden="true" style="width: 160px; height: 32px; margin-top: var(--spacing-sm);">
+      <text x="0" y="16" class="dds-diagram-label">SVG Label</text>
+    </svg>
+  </div>
+
+  <!-- Notes -->
+  <div class="pg-section">
+    <p class="pg-section__title">Diagram Framework — Notes</p>
+    <p class="text-small text-secondary">Notes or annotations related to a diagram appear here.</p>
+  </div>
+
+
+  <!-- =========================================================================
+       TEMPLATES
+       ========================================================================= -->
+
+  <!-- Documentation -->
+  <div class="pg-section">
+    <p class="pg-section__title">Template — Documentation</p>
+    <p class="text-small text-secondary" style="margin-bottom: var(--spacing-md);">
+      Standard template for technical documentation. Sections: Hero · Overview · Main Content · Notes.
+    </p>
+    <iframe
+      src="../src/templates/documentation.html"
+      title="Documentation Template"
+      style="width:100%; height:520px; border: var(--border-thin) solid var(--border-default); border-radius: var(--radius-medium);"
+    ></iframe>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="pg-section">
+    <p class="pg-section__title">Template — Dashboard</p>
+    <p class="text-small text-secondary" style="margin-bottom: var(--spacing-md);">
+      Overview template for summarized project or system state. Sections: Hero · Widgets · Status · Summary.
+    </p>
+    <iframe
+      src="../src/templates/dashboard.html"
+      title="Dashboard Template"
+      style="width:100%; height:520px; border: var(--border-thin) solid var(--border-default); border-radius: var(--radius-medium);"
+    ></iframe>
+  </div>
+
+  <!-- Diagram -->
+  <div class="pg-section">
+    <p class="pg-section__title">Template — Diagram</p>
+    <p class="text-small text-secondary" style="margin-bottom: var(--spacing-md);">
+      Full-page template for complex visualizations. Sections: Hero · Diagram Panel · Legend · Notes.
+    </p>
+    <iframe
+      src="../src/templates/diagram.html"
+      title="Diagram Template"
+      style="width:100%; height:520px; border: var(--border-thin) solid var(--border-default); border-radius: var(--radius-medium);"
+    ></iframe>
+  </div>
+
+  <!-- Reference -->
+  <div class="pg-section">
+    <p class="pg-section__title">Template — Reference</p>
+    <p class="text-small text-secondary" style="margin-bottom: var(--spacing-md);">
+      Lookup and catalog template for glossaries and reference docs. Sections: Hero · Reference Grid · Notes.
+    </p>
+    <iframe
+      src="../src/templates/reference.html"
+      title="Reference Template"
+      style="width:100%; height:520px; border: var(--border-thin) solid var(--border-default); border-radius: var(--radius-medium);"
+    ></iframe>
+  </div>
+
 </body>
 </html>

@@ -79,6 +79,35 @@
 
 
 /* ---------------------------------------------------------------------------
+   Group — labeled boundary around a set of Nodes
+   --------------------------------------------------------------------------- */
+
+.dds-group {
+  position: relative;
+  padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
+  border: var(--border-width-thin) dashed var(--border-color-strong);
+  border-radius: var(--radius-md);
+}
+
+.dds-group__label {
+  position: absolute;
+  top: calc(var(--spacing-sm) * -1);
+  left: var(--spacing-md);
+  padding-inline: var(--spacing-xs);
+  background-color: var(--background-default);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-secondary);
+}
+
+.dds-group__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+
+/* ---------------------------------------------------------------------------
    Connector — SVG line / path base styles
    --------------------------------------------------------------------------- */
 
@@ -118,4 +147,10 @@
   font-size: var(--font-size-caption);
   font-family: var(--font-family);
   fill: var(--text-secondary);
+}
+
+.dds-diagram-label-html {
+  font-size: var(--font-size-caption);
+  font-family: var(--font-family);
+  color: var(--text-secondary);
 }

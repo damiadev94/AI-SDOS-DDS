@@ -1,51 +1,220 @@
+<!--
+  Template:     Documentation
+  Purpose:      Standard template for technical documentation pages.
+  Sections:     Hero · Overview · Main Content · Notes · Footer
+  Dependencies:
+    layouts/base.html
+    components/header.html
+    components/footer.html
+    components/card.html
+    components/badge.html
+    components/divider.html
+    Patterns: Hero, Metadata Panel, Section Header
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<!-- PLACEHOLDER: Document description -->">
-  <title><!-- PLACEHOLDER: Document title --> — AI-SDOS DDS</title>
+  <meta name="description" content="Technical documentation page.">
+  <title>Document Title — DDS</title>
 
-  <link rel="stylesheet" href="../../assets/css/reset.css">
-  <link rel="stylesheet" href="../../assets/css/tokens.css">
-  <link rel="stylesheet" href="../../assets/css/typography.css">
-  <link rel="stylesheet" href="../../assets/css/layout.css">
-  <link rel="stylesheet" href="../../assets/css/components.css">
-  <link rel="stylesheet" href="../../assets/css/utilities.css">
-  <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
 </head>
 <body class="bg-default">
 
   <div class="dds-shell">
 
-    <!-- Header -->
+    <!-- =====================================================================
+         HEADER
+         Replace brand name and navigation links to match the project context.
+         ===================================================================== -->
     <div class="dds-shell__header">
-      <!-- SLOT: header component -->
+      <header class="dds-header" role="banner">
+        <a href="/" class="dds-header__brand">Brand Name</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="#" class="dds-header__nav-link" aria-current="page">Documentation</a>
+          <a href="#" class="dds-header__nav-link">Diagrams</a>
+          <a href="#" class="dds-header__nav-link">Reference</a>
+        </nav>
+      </header>
     </div>
 
-    <!-- Hero — document title and metadata -->
+
+    <!-- =====================================================================
+         HERO
+         Replace title, description, and status badges with document metadata.
+         ===================================================================== -->
     <div class="dds-shell__hero p-xxl">
-      <!-- SLOT: document title (h1), subtitle, status badges -->
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Document Title</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Brief description of the document's scope and purpose.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">v0.1</span>
+          <span class="dds-badge dds-badge--neutral">Draft</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Main — documentation layout with sidebar index -->
+
+    <!-- =====================================================================
+         MAIN
+         Sidebar: table of contents + metadata panel.
+         Content: document sections using h2 / h3 headings.
+         ===================================================================== -->
     <div class="dds-shell__main">
       <div class="dds-main dds-main--with-sidebar">
 
+        <!-- Sidebar -->
         <aside class="dds-main__sidebar">
-          <!-- SLOT: section index / table of contents -->
+
+          <nav aria-label="Section index">
+            <!-- Replace links to match document sections below -->
+            <a href="#overview" class="dds-header__nav-link">Overview</a>
+            <a href="#section-one" class="dds-header__nav-link">Section One</a>
+            <a href="#section-two" class="dds-header__nav-link">Section Two</a>
+            <a href="#notes" class="dds-header__nav-link">Notes</a>
+          </nav>
+
+          <div class="mt-xl">
+            <article class="dds-card dds-metadata-panel">
+              <dl class="dds-metadata-panel__list">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Version</dt>
+                  <dd class="text-small font-semibold">v0.1</dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Status</dt>
+                  <dd><span class="dds-badge dds-badge--neutral">Draft</span></dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Date</dt>
+                  <dd class="text-small">YYYY-MM-DD</dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Author</dt>
+                  <dd class="text-small">Author Name</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+
         </aside>
 
+
+        <!-- Primary content -->
         <main class="dds-main__content" role="main" id="main-content">
 
-          <!--
-            SLOT: Document sections.
-            Each section should be wrapped in <section> with an id for anchor links.
-            Use h2 for section titles, h3 for subsection titles.
-          -->
+          <!-- =================================================================
+               OVERVIEW
+               Introductory paragraph describing the document's scope.
+               ================================================================= -->
+          <section id="overview">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Overview</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Overview paragraph. Describe the document's scope, audience, and
+              relationship to surrounding documents. Replace this text.
+            </p>
+          </section>
 
-          <section id="section-placeholder">
-            <!-- SLOT: section content -->
+
+          <!-- =================================================================
+               SECTION ONE
+               Replace id, heading, body text, and card content.
+               Add or remove cards inside the grid as needed.
+               ================================================================= -->
+          <section id="section-one" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Section Heading</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+
+            <p class="text-body mt-md">
+              Section body text. Introduce the topic before presenting detailed
+              content. Replace this text.
+            </p>
+
+            <div class="grid grid-cols-2 gap-lg mt-lg">
+              <article class="dds-card">
+                <header class="dds-card__header">
+                  <h3 class="text-h4">Card Title</h3>
+                </header>
+                <div class="dds-card__body mt-sm">
+                  <p class="text-body text-secondary">
+                    Card body text. Describe a concept, decision, or item.
+                    Replace this content.
+                  </p>
+                </div>
+                <footer class="dds-card__footer mt-md">
+                  <span class="dds-badge dds-badge--neutral">Label</span>
+                </footer>
+              </article>
+
+              <article class="dds-card">
+                <header class="dds-card__header">
+                  <h3 class="text-h4">Card Title</h3>
+                </header>
+                <div class="dds-card__body mt-sm">
+                  <p class="text-body text-secondary">
+                    Card body text. Describe a concept, decision, or item.
+                    Replace this content.
+                  </p>
+                </div>
+                <footer class="dds-card__footer mt-md">
+                  <span class="dds-badge dds-badge--neutral">Label</span>
+                </footer>
+              </article>
+            </div>
+          </section>
+
+
+          <!-- =================================================================
+               SECTION TWO
+               Additional section. Duplicate and adjust for further sections.
+               ================================================================= -->
+          <section id="section-two" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Section Heading</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+
+            <p class="text-body mt-md">
+              Section body text. Replace this text.
+            </p>
+          </section>
+
+
+          <!-- =================================================================
+               NOTES
+               Supplementary observations, caveats, or open questions.
+               ================================================================= -->
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">
+                  Notes, caveats, or open questions relevant to this document.
+                  Replace this content.
+                </p>
+              </div>
+            </article>
           </section>
 
         </main>
@@ -53,9 +222,16 @@
       </div>
     </div>
 
-    <!-- Footer -->
+
+    <!-- =====================================================================
+         FOOTER
+         Replace system name, version, and date with real values.
+         ===================================================================== -->
     <div class="dds-shell__footer">
-      <!-- SLOT: footer component -->
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">System Name — v0.1</span>
+        <span class="dds-footer__info">YYYY</span>
+      </footer>
     </div>
 
   </div>

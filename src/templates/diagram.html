@@ -1,78 +1,204 @@
+<!--
+  Template:     Diagram
+  Purpose:      Full-page template for complex visualizations and architectural diagrams.
+  Sections:     Hero · Diagram Panel · Legend · Notes
+  Dependencies:
+    layouts/base.html
+    components/header.html
+    components/footer.html
+    components/badge.html
+    components/legend.html
+    Patterns: Hero, Diagram Panel, Section Header
+    Diagram Framework: Canvas, Nodes, Groups, Connectors, Legend
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<!-- PLACEHOLDER: Diagram description -->">
-  <title><!-- PLACEHOLDER: Diagram title --> — AI-SDOS DDS</title>
+  <meta name="description" content="Diagram page.">
+  <title>Diagram Title — DDS</title>
 
-  <link rel="stylesheet" href="../../assets/css/reset.css">
-  <link rel="stylesheet" href="../../assets/css/tokens.css">
-  <link rel="stylesheet" href="../../assets/css/typography.css">
-  <link rel="stylesheet" href="../../assets/css/layout.css">
-  <link rel="stylesheet" href="../../assets/css/components.css">
-  <link rel="stylesheet" href="../../assets/css/diagrams.css">
-  <link rel="stylesheet" href="../../assets/css/utilities.css">
-  <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
 </head>
 <body class="bg-default">
 
   <div class="dds-shell">
 
-    <!-- Header -->
+    <!-- =====================================================================
+         HEADER
+         Replace brand name and navigation links to match the project context.
+         ===================================================================== -->
     <div class="dds-shell__header">
-      <!-- SLOT: header component -->
+      <header class="dds-header" role="banner">
+        <a href="/" class="dds-header__brand">Brand Name</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="#" class="dds-header__nav-link" aria-current="page">Diagrams</a>
+          <a href="#" class="dds-header__nav-link">Documentation</a>
+          <a href="#" class="dds-header__nav-link">Reference</a>
+        </nav>
+      </header>
     </div>
 
-    <!-- Hero — diagram title, type badge, and metadata -->
+
+    <!-- =====================================================================
+         HERO
+         Replace title, description, diagram type badge, version, and date.
+         ===================================================================== -->
     <div class="dds-shell__hero p-xl">
-      <!-- SLOT: diagram title (h1), type badge (e.g. "C4 Diagram"), version, date -->
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Diagram Title</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Short description of what this diagram represents and its scope.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Diagram Type</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+          <span class="dds-badge dds-badge--neutral">YYYY-MM-DD</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Main — full-width for diagram canvas -->
+
+    <!-- =====================================================================
+         MAIN
+         Full-width layout for the diagram canvas.
+         ===================================================================== -->
     <div class="dds-shell__main">
       <div class="dds-main">
 
         <main class="dds-main__content" role="main" id="main-content">
 
-          <!--
-            SLOT: Diagram canvas.
-            Each diagram type extends this structure with its own nodes and connectors.
-            The SVG overlay handles arrows and connector lines.
-          -->
-          <div class="dds-diagram">
+          <!-- ===============================================================
+               DIAGRAM PANEL
+               Replace nodes, connectors, legend entries, and notes.
+               Position nodes using inline style="position:absolute;top:...;left:..."
+               on the dds-diagram__canvas when absolute layout is needed.
+               =============================================================== -->
+          <section id="diagram-panel">
+            <article class="dds-card dds-diagram-panel">
 
-            <div class="dds-diagram__canvas">
-              <!-- SLOT: diagram nodes (HTML elements) -->
+              <header class="dds-diagram-panel__header">
+                <h2 class="text-h4">Diagram Title</h2>
+                <span class="dds-badge dds-badge--neutral">Diagram Type</span>
+              </header>
 
-              <svg class="dds-diagram__svg" aria-hidden="true">
-                <defs>
-                  <!-- SLOT: SVG arrow marker definitions -->
-                </defs>
-                <!-- SLOT: SVG connector paths -->
-              </svg>
+              <div class="dds-diagram-panel__body mt-md">
+                <div class="dds-diagram">
+                  <div class="dds-diagram__canvas">
+
+                    <!-- Replace with actual diagram nodes.
+                         Use dds-node--primary / --success / --warning / --error variants. -->
+
+                    <div class="dds-node dds-node--primary">
+                      <span class="dds-node__label">Node Label</span>
+                      <span class="dds-node__description">Type</span>
+                    </div>
+
+                    <div class="dds-node">
+                      <span class="dds-node__label">Node Label</span>
+                      <span class="dds-node__description">Type</span>
+                    </div>
+
+                    <div class="dds-node dds-node--success">
+                      <span class="dds-node__label">Node Label</span>
+                      <span class="dds-node__description">Type</span>
+                    </div>
+
+                    <div class="dds-node dds-node--warning">
+                      <span class="dds-node__label">Node Label</span>
+                      <span class="dds-node__description">Type</span>
+                    </div>
+
+                    <!-- SVG overlay for connector lines and arrows.
+                         Define arrow markers in <defs> and draw paths below. -->
+                    <svg class="dds-diagram__svg" aria-hidden="true">
+                      <defs>
+                        <marker id="dds-arrow-default" viewBox="0 0 10 10"
+                                refX="8" refY="5" markerWidth="6" markerHeight="6"
+                                orient="auto-start-reverse">
+                          <path class="dds-arrow" d="M0,0 L10,5 L0,10 z"></path>
+                        </marker>
+                      </defs>
+                      <!-- Replace with actual SVG connector paths -->
+                    </svg>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Legend: replace swatch colors and labels to match diagram nodes -->
+              <aside class="dds-diagram-panel__legend mt-md" aria-label="Diagram legend">
+                <aside class="dds-legend">
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-primary" aria-hidden="true"></span>
+                    <span>Legend Label</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-success" aria-hidden="true"></span>
+                    <span>Legend Label</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-warning" aria-hidden="true"></span>
+                    <span>Legend Label</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-error" aria-hidden="true"></span>
+                    <span>Legend Label</span>
+                  </div>
+                </aside>
+              </aside>
+
+              <footer class="dds-diagram-panel__notes mt-md">
+                <p class="text-small text-secondary">
+                  Panel-level notes or annotations about the diagram. Replace this text.
+                </p>
+              </footer>
+
+            </article>
+          </section>
+
+
+          <!-- ===============================================================
+               NOTES — description, decisions, context
+               Replace with qualitative notes about the diagram.
+               =============================================================== -->
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
             </div>
-
-          </div>
-
-          <!-- Legend -->
-          <div class="mt-lg">
-            <!-- SLOT: legend component -->
-          </div>
-
-          <!-- Description / annotation -->
-          <section id="diagram-description" class="mt-xl">
-            <!-- SLOT: diagram description, decisions, notes -->
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">
+                  Notes, decisions, or contextual information about this diagram.
+                  Replace this content.
+                </p>
+              </div>
+            </article>
           </section>
 
         </main>
-
       </div>
     </div>
 
-    <!-- Footer -->
+
+    <!-- =====================================================================
+         FOOTER
+         Replace system name, version, and date with real values.
+         ===================================================================== -->
     <div class="dds-shell__footer">
-      <!-- SLOT: footer component -->
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">System Name — v0.1</span>
+        <span class="dds-footer__info">YYYY</span>
+      </footer>
     </div>
 
   </div>

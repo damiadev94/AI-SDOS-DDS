@@ -1,55 +1,227 @@
+<!--
+  Template:     Reference
+  Purpose:      Lookup and catalog template for glossaries, component references, and token catalogs.
+  Sections:     Hero · Reference Grid · Notes
+  Dependencies:
+    layouts/base.html
+    components/header.html
+    components/footer.html
+    components/card.html
+    components/badge.html
+    components/divider.html
+    Patterns: Hero, Section Header, Metadata Panel
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<!-- PLACEHOLDER: Reference page description -->">
-  <title><!-- PLACEHOLDER: Reference title --> — AI-SDOS DDS</title>
+  <meta name="description" content="Reference documentation page.">
+  <title>Reference Title — DDS</title>
 
-  <link rel="stylesheet" href="../../assets/css/reset.css">
-  <link rel="stylesheet" href="../../assets/css/tokens.css">
-  <link rel="stylesheet" href="../../assets/css/typography.css">
-  <link rel="stylesheet" href="../../assets/css/layout.css">
-  <link rel="stylesheet" href="../../assets/css/components.css">
-  <link rel="stylesheet" href="../../assets/css/utilities.css">
-  <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
 </head>
 <body class="bg-default">
 
   <div class="dds-shell">
 
-    <!-- Header -->
+    <!-- =====================================================================
+         HEADER
+         Replace brand name and navigation links to match the project context.
+         ===================================================================== -->
     <div class="dds-shell__header">
-      <!-- SLOT: header component -->
+      <header class="dds-header" role="banner">
+        <a href="/" class="dds-header__brand">Brand Name</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="#" class="dds-header__nav-link" aria-current="page">Reference</a>
+          <a href="#" class="dds-header__nav-link">Documentation</a>
+          <a href="#" class="dds-header__nav-link">Diagrams</a>
+        </nav>
+      </header>
     </div>
 
-    <!-- Hero — reference document title and scope -->
+
+    <!-- =====================================================================
+         HERO
+         Replace title, scope description, category badge, and version.
+         ===================================================================== -->
     <div class="dds-shell__hero p-xxl">
-      <!-- SLOT: title (h1), subtitle, category badge -->
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Reference Title</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Description of the reference catalog's scope, coverage, and intended audience.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Category</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Main — reference layout with sidebar index -->
+
+    <!-- =====================================================================
+         MAIN
+         Sidebar: alphabetical or category index.
+         Content: reference entries (term, type, description, usage, related).
+         ===================================================================== -->
     <div class="dds-shell__main">
       <div class="dds-main dds-main--with-sidebar">
 
+        <!-- Sidebar: index navigation -->
         <aside class="dds-main__sidebar">
-          <!-- SLOT: alphabetical or categorized reference index -->
+          <nav aria-label="Reference index">
+            <!-- Replace anchors to match the entry ids below.
+                 Organize by letter, category, or any grouping that fits the catalog. -->
+            <a href="#entry-alpha" class="dds-header__nav-link">Alpha</a>
+            <a href="#entry-beta" class="dds-header__nav-link">Beta</a>
+            <a href="#entry-gamma" class="dds-header__nav-link">Gamma</a>
+            <a href="#notes" class="dds-header__nav-link">Notes</a>
+          </nav>
         </aside>
 
+
+        <!-- Primary content: reference entries -->
         <main class="dds-main__content" role="main" id="main-content">
 
-          <!--
-            SLOT: Reference entries.
-            Each entry is an anchored section with a consistent structure:
-            - Term / identifier
-            - Type badge
-            - Description
-            - Usage example
-            - Related entries
-          -->
+          <!-- ===============================================================
+               REFERENCE ENTRY
+               Structure per entry:
+                 1. Section heading (term or identifier)
+                 2. Type badge (token / component / pattern / term / …)
+                 3. Definition or description
+                 4. Usage card (example, code reference, or context)
+                 5. Related entries
+               Duplicate this block for each entry in the catalog.
+               =============================================================== -->
 
-          <section id="entry-placeholder">
-            <!-- SLOT: reference entry content -->
+          <section id="entry-alpha">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Term or Identifier</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--primary">Type</span>
+            </div>
+
+            <p class="text-body mt-md">
+              Definition or description of this term. Explain its meaning, context,
+              and role in the system. Replace this text.
+            </p>
+
+            <article class="dds-card mt-md">
+              <header class="dds-card__header">
+                <h3 class="text-h4">Usage</h3>
+              </header>
+              <div class="dds-card__body mt-sm">
+                <p class="text-small text-secondary">
+                  Usage example, code snippet reference, or contextual note.
+                  Replace this content.
+                </p>
+              </div>
+            </article>
+
+            <p class="text-small text-secondary mt-md">
+              Related: Term, Term, Term
+            </p>
+          </section>
+
+
+          <hr class="dds-divider">
+
+
+          <section id="entry-beta">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Term or Identifier</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--success">Type</span>
+            </div>
+
+            <p class="text-body mt-md">
+              Definition or description of this term. Explain its meaning, context,
+              and role in the system. Replace this text.
+            </p>
+
+            <article class="dds-card mt-md">
+              <header class="dds-card__header">
+                <h3 class="text-h4">Usage</h3>
+              </header>
+              <div class="dds-card__body mt-sm">
+                <p class="text-small text-secondary">
+                  Usage example, code snippet reference, or contextual note.
+                  Replace this content.
+                </p>
+              </div>
+            </article>
+
+            <p class="text-small text-secondary mt-md">
+              Related: Term, Term, Term
+            </p>
+          </section>
+
+
+          <hr class="dds-divider">
+
+
+          <section id="entry-gamma">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Term or Identifier</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--neutral">Type</span>
+            </div>
+
+            <p class="text-body mt-md">
+              Definition or description of this term. Explain its meaning, context,
+              and role in the system. Replace this text.
+            </p>
+
+            <article class="dds-card mt-md">
+              <header class="dds-card__header">
+                <h3 class="text-h4">Usage</h3>
+              </header>
+              <div class="dds-card__body mt-sm">
+                <p class="text-small text-secondary">
+                  Usage example, code snippet reference, or contextual note.
+                  Replace this content.
+                </p>
+              </div>
+            </article>
+
+            <p class="text-small text-secondary mt-md">
+              Related: Term, Term, Term
+            </p>
+          </section>
+
+
+          <!-- ===============================================================
+               NOTES
+               Replace with notes about coverage, conventions, or update history.
+               =============================================================== -->
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">
+                  Notes about this reference document: conventions used, coverage
+                  scope, or update history. Replace this content.
+                </p>
+              </div>
+            </article>
           </section>
 
         </main>
@@ -57,9 +229,16 @@
       </div>
     </div>
 
-    <!-- Footer -->
+
+    <!-- =====================================================================
+         FOOTER
+         Replace system name, version, and date with real values.
+         ===================================================================== -->
     <div class="dds-shell__footer">
-      <!-- SLOT: footer component -->
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">System Name — v0.1</span>
+        <span class="dds-footer__info">YYYY</span>
+      </footer>
     </div>
 
   </div>

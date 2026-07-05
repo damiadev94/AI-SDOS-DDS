@@ -1,64 +1,234 @@
+<!--
+  Template:     Dashboard
+  Purpose:      Overview template for summarized project or system state.
+  Sections:     Hero · Widgets · Status · Summary
+  Dependencies:
+    layouts/base.html
+    components/header.html
+    components/footer.html
+    components/card.html
+    components/badge.html
+    components/divider.html
+    Patterns: Hero, Dashboard Widget, Status Card, Section Header
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<!-- PLACEHOLDER: Dashboard description -->">
-  <title><!-- PLACEHOLDER: Dashboard title --> — AI-SDOS DDS</title>
+  <meta name="description" content="Dashboard overview page.">
+  <title>Dashboard Title — DDS</title>
 
-  <link rel="stylesheet" href="../../assets/css/reset.css">
-  <link rel="stylesheet" href="../../assets/css/tokens.css">
-  <link rel="stylesheet" href="../../assets/css/typography.css">
-  <link rel="stylesheet" href="../../assets/css/layout.css">
-  <link rel="stylesheet" href="../../assets/css/components.css">
-  <link rel="stylesheet" href="../../assets/css/utilities.css">
-  <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
 </head>
 <body class="bg-default">
 
   <div class="dds-shell">
 
-    <!-- Header -->
+    <!-- =====================================================================
+         HEADER
+         Replace brand name and navigation links to match the project context.
+         ===================================================================== -->
     <div class="dds-shell__header">
-      <!-- SLOT: header component -->
+      <header class="dds-header" role="banner">
+        <a href="/" class="dds-header__brand">Brand Name</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="#" class="dds-header__nav-link" aria-current="page">Dashboard</a>
+          <a href="#" class="dds-header__nav-link">Documentation</a>
+          <a href="#" class="dds-header__nav-link">Reference</a>
+        </nav>
+      </header>
     </div>
 
-    <!-- Hero — dashboard title and summary -->
+
+    <!-- =====================================================================
+         HERO
+         Replace title, summary description, overall status badge, and date.
+         ===================================================================== -->
     <div class="dds-shell__hero p-xl">
-      <!-- SLOT: dashboard name, status summary, date -->
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Dashboard Title</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Short summary of what this dashboard represents and its reporting period.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--success">On Track</span>
+          <span class="dds-badge dds-badge--neutral">YYYY-MM-DD</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Main — full-width content, no sidebar -->
+
+    <!-- =====================================================================
+         MAIN
+         Full-width layout. No sidebar.
+         ===================================================================== -->
     <div class="dds-shell__main">
       <div class="dds-main">
 
         <main class="dds-main__content" role="main" id="main-content">
 
-          <!--
-            SLOT: Metric cards grid.
-            Use grid-cols-2, grid-cols-3, or grid-cols-4 depending on content.
-          -->
-          <div class="grid grid-cols-3 gap-lg">
-            <!-- SLOT: card components -->
-          </div>
+          <!-- ===============================================================
+               WIDGETS — key metric cards
+               Adjust grid-cols-* and add or remove widgets as needed.
+               Replace label, value, and delta in each widget.
+               =============================================================== -->
+          <section id="widgets">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Metrics</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <div class="grid grid-cols-4 gap-lg mt-md">
+
+              <article class="dds-card dds-dashboard-widget">
+                <p class="text-caption text-secondary">Metric Label</p>
+                <p class="dds-dashboard-widget__value mt-xs">—</p>
+                <span class="dds-badge dds-badge--neutral mt-sm">Delta</span>
+              </article>
+
+              <article class="dds-card dds-dashboard-widget">
+                <p class="text-caption text-secondary">Metric Label</p>
+                <p class="dds-dashboard-widget__value mt-xs">—</p>
+                <span class="dds-badge dds-badge--success mt-sm">Delta</span>
+              </article>
+
+              <article class="dds-card dds-dashboard-widget">
+                <p class="text-caption text-secondary">Metric Label</p>
+                <p class="dds-dashboard-widget__value mt-xs">—</p>
+                <span class="dds-badge dds-badge--warning mt-sm">Delta</span>
+              </article>
+
+              <article class="dds-card dds-dashboard-widget">
+                <p class="text-caption text-secondary">Metric Label</p>
+                <p class="dds-dashboard-widget__value mt-xs">—</p>
+                <span class="dds-badge dds-badge--neutral mt-sm">Delta</span>
+              </article>
+
+            </div>
+          </section>
+
 
           <hr class="dds-divider mt-xl mb-xl">
 
-          <!--
-            SLOT: Status tables, progress sections, or grouped content blocks.
-          -->
-          <section id="overview-placeholder">
-            <!-- SLOT: overview content -->
+
+          <!-- ===============================================================
+               STATUS — item-level status cards
+               Replace each card's heading, badge, and status note.
+               Add dds-status-card--success / --warning / --error for accent.
+               =============================================================== -->
+          <section id="status">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Status</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <div class="grid grid-cols-3 gap-lg mt-md">
+
+              <article class="dds-card dds-status-card dds-status-card--success">
+                <div class="dds-status-card__header">
+                  <h4 class="text-h4">Item Name</h4>
+                  <span class="dds-badge dds-badge--success">Complete</span>
+                </div>
+                <p class="text-body text-secondary mt-sm">
+                  Short note about the current state of this item.
+                </p>
+              </article>
+
+              <article class="dds-card dds-status-card dds-status-card--success">
+                <div class="dds-status-card__header">
+                  <h4 class="text-h4">Item Name</h4>
+                  <span class="dds-badge dds-badge--success">Complete</span>
+                </div>
+                <p class="text-body text-secondary mt-sm">
+                  Short note about the current state of this item.
+                </p>
+              </article>
+
+              <article class="dds-card dds-status-card dds-status-card--warning">
+                <div class="dds-status-card__header">
+                  <h4 class="text-h4">Item Name</h4>
+                  <span class="dds-badge dds-badge--warning">In Progress</span>
+                </div>
+                <p class="text-body text-secondary mt-sm">
+                  Short note about the current state of this item.
+                </p>
+              </article>
+
+              <article class="dds-card dds-status-card">
+                <div class="dds-status-card__header">
+                  <h4 class="text-h4">Item Name</h4>
+                  <span class="dds-badge dds-badge--neutral">Pending</span>
+                </div>
+                <p class="text-body text-secondary mt-sm">
+                  Short note about the current state of this item.
+                </p>
+              </article>
+
+              <article class="dds-card dds-status-card">
+                <div class="dds-status-card__header">
+                  <h4 class="text-h4">Item Name</h4>
+                  <span class="dds-badge dds-badge--neutral">Pending</span>
+                </div>
+                <p class="text-body text-secondary mt-sm">
+                  Short note about the current state of this item.
+                </p>
+              </article>
+
+              <article class="dds-card dds-status-card dds-status-card--error">
+                <div class="dds-status-card__header">
+                  <h4 class="text-h4">Item Name</h4>
+                  <span class="dds-badge dds-badge--error">Blocked</span>
+                </div>
+                <p class="text-body text-secondary mt-sm">
+                  Short note about the current state of this item.
+                </p>
+              </article>
+
+            </div>
+          </section>
+
+
+          <hr class="dds-divider mt-xl mb-xl">
+
+
+          <!-- ===============================================================
+               SUMMARY — narrative overview
+               Replace with a concise qualitative summary of the dashboard state.
+               =============================================================== -->
+          <section id="summary">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Summary</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">
+                  Narrative summary of the overall state. Highlight progress,
+                  blockers, and next steps. Replace this content.
+                </p>
+              </div>
+            </article>
           </section>
 
         </main>
-
       </div>
     </div>
 
-    <!-- Footer -->
+
+    <!-- =====================================================================
+         FOOTER
+         Replace system name, version, and date with real values.
+         ===================================================================== -->
     <div class="dds-shell__footer">
-      <!-- SLOT: footer component -->
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">System Name — v0.1</span>
+        <span class="dds-footer__info">YYYY</span>
+      </footer>
     </div>
 
   </div>

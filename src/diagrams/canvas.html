@@ -1,0 +1,27 @@
+<!--
+  Diagram Element: Canvas
+  Purpose:   Represent the area where diagrams are constructed.
+  Responsibilities:
+    - Contain Nodes.
+    - Contain Connectors via an SVG overlay.
+    - Define diagram boundaries and spacing.
+  Non-responsibilities:
+    - Draw specific diagrams (Roadmap, UML, C4, etc.).
+  Dependencies:
+    - Design Tokens
+-->
+
+<div class="dds-diagram">
+  <div class="dds-diagram__canvas">
+
+    <!-- SLOT: diagram nodes (HTML elements) -->
+
+    <svg class="dds-diagram__svg" aria-hidden="true">
+      <defs>
+        <!-- SLOT: SVG arrow marker definitions -->
+      </defs>
+      <!-- SLOT: SVG connector paths -->
+    </svg>
+
+  </div>
+</div>
