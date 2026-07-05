@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<!-- PLACEHOLDER: Document description -->">
+  <title><!-- PLACEHOLDER: Document title --> — AI-SDOS DDS</title>
+
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/utilities.css">
+  <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+
+  <div class="dds-shell">
+
+    <!-- Header -->
+    <div class="dds-shell__header">
+      <!-- SLOT: header component -->
+    </div>
+
+    <!-- Hero — document title and metadata -->
+    <div class="dds-shell__hero p-xxl">
+      <!-- SLOT: document title (h1), subtitle, status badges -->
+    </div>
+
+    <!-- Main — documentation layout with sidebar index -->
+    <div class="dds-shell__main">
+      <div class="dds-main dds-main--with-sidebar">
+
+        <aside class="dds-main__sidebar">
+          <!-- SLOT: section index / table of contents -->
+        </aside>
+
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <!--
+            SLOT: Document sections.
+            Each section should be wrapped in <section> with an id for anchor links.
+            Use h2 for section titles, h3 for subsection titles.
+          -->
+
+          <section id="section-placeholder">
+            <!-- SLOT: section content -->
+          </section>
+
+        </main>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="dds-shell__footer">
+      <!-- SLOT: footer component -->
+    </div>
+
+  </div>
+
+</body>
+</html>

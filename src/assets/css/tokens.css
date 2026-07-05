@@ -1,0 +1,159 @@
+/* =============================================================================
+   tokens.css
+   Design Tokens — Single Source of Truth for all visual decisions.
+   Only CSS custom properties. No classes. No selectors beyond :root.
+   ============================================================================= */
+
+:root {
+
+  /* ---------------------------------------------------------------------------
+     PRIMITIVE TOKENS
+     Raw values. Never use directly in components — reference via Semantic Tokens.
+     --------------------------------------------------------------------------- */
+
+  /* Color Primitives */
+  --primitive-blue-600:   #2563EB;
+  --primitive-green-600:  #16A34A;
+  --primitive-orange-600: #D97706;
+  --primitive-red-600:    #DC2626;
+  --primitive-gray-900:   #111827;
+  --primitive-gray-600:   #4B5563;
+  --primitive-gray-300:   #D1D5DB;
+  --primitive-gray-100:   #F3F4F6;
+  --primitive-white:      #FFFFFF;
+
+  /* Typography Primitives */
+  --primitive-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --primitive-size-display: 3rem;      /* 48px */
+  --primitive-size-h1:      2.25rem;   /* 36px */
+  --primitive-size-h2:      1.875rem;  /* 30px */
+  --primitive-size-h3:      1.5rem;    /* 24px */
+  --primitive-size-h4:      1.25rem;   /* 20px */
+  --primitive-size-body:    1rem;      /* 16px */
+  --primitive-size-small:   0.875rem;  /* 14px */
+  --primitive-size-caption: 0.75rem;   /* 12px */
+
+  --primitive-weight-regular:  400;
+  --primitive-weight-medium:   500;
+  --primitive-weight-semibold: 600;
+  --primitive-weight-bold:     700;
+
+  /* Spacing Primitives — base-8 scale */
+  --primitive-space-xs:   0.25rem;  /* 4px  */
+  --primitive-space-sm:   0.5rem;   /* 8px  */
+  --primitive-space-md:   1rem;     /* 16px */
+  --primitive-space-lg:   1.5rem;   /* 24px */
+  --primitive-space-xl:   2rem;     /* 32px */
+  --primitive-space-xxl:  3rem;     /* 48px */
+  --primitive-space-xxxl: 4rem;     /* 64px */
+
+  /* Radius Primitives */
+  --primitive-radius-none:   0;
+  --primitive-radius-small:  0.25rem;  /* 4px  */
+  --primitive-radius-medium: 0.5rem;   /* 8px  */
+  --primitive-radius-large:  0.75rem;  /* 12px */
+  --primitive-radius-xl:     1rem;     /* 16px */
+
+  /* Border Primitives */
+  --primitive-border-thin:    1px;
+  --primitive-border-default: 2px;
+  --primitive-border-thick:   3px;
+
+  /* Motion Primitives */
+  --primitive-motion-fast:   100ms;
+  --primitive-motion-normal: 200ms;
+  --primitive-motion-slow:   300ms;
+
+  /* Breakpoint Primitives */
+  --primitive-bp-mobile:  480px;
+  --primitive-bp-tablet:  768px;
+  --primitive-bp-desktop: 1280px;
+  --primitive-bp-wide:    1600px;
+
+
+  /* ---------------------------------------------------------------------------
+     SEMANTIC TOKENS
+     Assign meaning to primitive values. Components use only these.
+     --------------------------------------------------------------------------- */
+
+  /* Color — Semantic */
+  --color-primary:   var(--primitive-blue-600);
+  --color-success:   var(--primitive-green-600);
+  --color-warning:   var(--primitive-orange-600);
+  --color-error:     var(--primitive-red-600);
+
+  /* Background — Semantic */
+  --background-default: var(--primitive-white);
+  --background-surface: var(--primitive-gray-100);
+
+  /* Border — Semantic */
+  --border-default: var(--primitive-gray-300);
+
+  /* Text — Semantic */
+  --text-primary:   var(--primitive-gray-900);
+  --text-secondary: var(--primitive-gray-600);
+  --text-inverse:   var(--primitive-white);
+
+  /* Typography — Semantic */
+  --font-family: var(--primitive-font-family);
+
+  --font-size-display: var(--primitive-size-display);
+  --font-size-h1:      var(--primitive-size-h1);
+  --font-size-h2:      var(--primitive-size-h2);
+  --font-size-h3:      var(--primitive-size-h3);
+  --font-size-h4:      var(--primitive-size-h4);
+  --font-size-body:    var(--primitive-size-body);
+  --font-size-small:   var(--primitive-size-small);
+  --font-size-caption: var(--primitive-size-caption);
+
+  --font-weight-regular:  var(--primitive-weight-regular);
+  --font-weight-medium:   var(--primitive-weight-medium);
+  --font-weight-semibold: var(--primitive-weight-semibold);
+  --font-weight-bold:     var(--primitive-weight-bold);
+
+  /* Spacing — Semantic */
+  --spacing-xs:   var(--primitive-space-xs);
+  --spacing-sm:   var(--primitive-space-sm);
+  --spacing-md:   var(--primitive-space-md);
+  --spacing-lg:   var(--primitive-space-lg);
+  --spacing-xl:   var(--primitive-space-xl);
+  --spacing-xxl:  var(--primitive-space-xxl);
+  --spacing-xxxl: var(--primitive-space-xxxl);
+
+  /* Radius — Semantic */
+  --radius-none:   var(--primitive-radius-none);
+  --radius-small:  var(--primitive-radius-small);
+  --radius-medium: var(--primitive-radius-medium);
+  --radius-large:  var(--primitive-radius-large);
+  --radius-xl:     var(--primitive-radius-xl);
+
+  /* Border Width — Semantic */
+  --border-thin:    var(--primitive-border-thin);
+  --border-default-width: var(--primitive-border-default);
+  --border-thick:   var(--primitive-border-thick);
+
+  /* Elevation — Semantic */
+  --elevation-none:   none;
+  --elevation-small:  0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --elevation-medium: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --elevation-large:  0 10px 15px rgba(0, 0, 0, 0.10), 0 4px 6px rgba(0, 0, 0, 0.05);
+
+  /* Motion — Semantic */
+  --motion-fast:   var(--primitive-motion-fast);
+  --motion-normal: var(--primitive-motion-normal);
+  --motion-slow:   var(--primitive-motion-slow);
+
+  /* Z-Index — Semantic */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-overlay: 100;
+  --z-modal:   200;
+  --z-top:     999;
+
+  /* Opacity — Semantic */
+  --opacity-disabled: 0.4;
+  --opacity-muted:    0.6;
+  --opacity-full:     1;
+
+}

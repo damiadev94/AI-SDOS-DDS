@@ -1,0 +1,36 @@
+<!--
+  Component: Legend
+  Purpose:   Visual key explaining the color or symbol conventions used in a diagram.
+  Responsibilities:
+    - Pair a color swatch with a descriptive label.
+    - Group multiple legend items horizontally or in a grid.
+    - Remain compact and non-intrusive alongside diagrams.
+  Future Variants:
+    - dds-legend--vertical: stacked column layout.
+    - dds-legend--bordered: with outer container border.
+    - dds-legend--icon: replaces swatch with an icon.
+-->
+
+<aside class="dds-legend" aria-label="Diagram legend">
+
+  <div class="dds-legend__item">
+    <span class="dds-legend__swatch bg-primary" aria-hidden="true"></span>
+    <span><!-- PLACEHOLDER: Legend label --></span>
+  </div>
+
+  <div class="dds-legend__item">
+    <span class="dds-legend__swatch bg-success" aria-hidden="true"></span>
+    <span><!-- PLACEHOLDER: Legend label --></span>
+  </div>
+
+  <div class="dds-legend__item">
+    <span class="dds-legend__swatch bg-warning" aria-hidden="true"></span>
+    <span><!-- PLACEHOLDER: Legend label --></span>
+  </div>
+
+  <div class="dds-legend__item">
+    <span class="dds-legend__swatch bg-error" aria-hidden="true"></span>
+    <span><!-- PLACEHOLDER: Legend label --></span>
+  </div>
+
+</aside>

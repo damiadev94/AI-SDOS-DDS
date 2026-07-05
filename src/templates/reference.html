@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<!-- PLACEHOLDER: Reference page description -->">
+  <title><!-- PLACEHOLDER: Reference title --> — AI-SDOS DDS</title>
+
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/utilities.css">
+  <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+
+  <div class="dds-shell">
+
+    <!-- Header -->
+    <div class="dds-shell__header">
+      <!-- SLOT: header component -->
+    </div>
+
+    <!-- Hero — reference document title and scope -->
+    <div class="dds-shell__hero p-xxl">
+      <!-- SLOT: title (h1), subtitle, category badge -->
+    </div>
+
+    <!-- Main — reference layout with sidebar index -->
+    <div class="dds-shell__main">
+      <div class="dds-main dds-main--with-sidebar">
+
+        <aside class="dds-main__sidebar">
+          <!-- SLOT: alphabetical or categorized reference index -->
+        </aside>
+
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <!--
+            SLOT: Reference entries.
+            Each entry is an anchored section with a consistent structure:
+            - Term / identifier
+            - Type badge
+            - Description
+            - Usage example
+            - Related entries
+          -->
+
+          <section id="entry-placeholder">
+            <!-- SLOT: reference entry content -->
+          </section>
+
+        </main>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="dds-shell__footer">
+      <!-- SLOT: footer component -->
+    </div>
+
+  </div>
+
+</body>
+</html>

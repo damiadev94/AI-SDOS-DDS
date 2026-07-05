@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<!-- PLACEHOLDER: Dashboard description -->">
+  <title><!-- PLACEHOLDER: Dashboard title --> — AI-SDOS DDS</title>
+
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/utilities.css">
+  <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+
+  <div class="dds-shell">
+
+    <!-- Header -->
+    <div class="dds-shell__header">
+      <!-- SLOT: header component -->
+    </div>
+
+    <!-- Hero — dashboard title and summary -->
+    <div class="dds-shell__hero p-xl">
+      <!-- SLOT: dashboard name, status summary, date -->
+    </div>
+
+    <!-- Main — full-width content, no sidebar -->
+    <div class="dds-shell__main">
+      <div class="dds-main">
+
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <!--
+            SLOT: Metric cards grid.
+            Use grid-cols-2, grid-cols-3, or grid-cols-4 depending on content.
+          -->
+          <div class="grid grid-cols-3 gap-lg">
+            <!-- SLOT: card components -->
+          </div>
+
+          <hr class="dds-divider mt-xl mb-xl">
+
+          <!--
+            SLOT: Status tables, progress sections, or grouped content blocks.
+          -->
+          <section id="overview-placeholder">
+            <!-- SLOT: overview content -->
+          </section>
+
+        </main>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="dds-shell__footer">
+      <!-- SLOT: footer component -->
+    </div>
+
+  </div>
+
+</body>
+</html>

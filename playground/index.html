@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DDS Playground</title>
+
+  <link rel="stylesheet" href="../src/assets/css/reset.css">
+  <link rel="stylesheet" href="../src/assets/css/tokens.css">
+  <link rel="stylesheet" href="../src/assets/css/typography.css">
+  <link rel="stylesheet" href="../src/assets/css/layout.css">
+  <link rel="stylesheet" href="../src/assets/css/components.css">
+  <link rel="stylesheet" href="../src/assets/css/diagrams.css">
+  <link rel="stylesheet" href="../src/assets/css/utilities.css">
+
+  <style>
+    /* Playground-only styles — not part of the DDS */
+    .pg-section {
+      padding: var(--spacing-xl) var(--spacing-lg);
+      border-bottom: var(--border-thin) solid var(--border-default);
+    }
+    .pg-section__title {
+      font-size: var(--font-size-caption);
+      font-weight: var(--font-weight-semibold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+      margin-bottom: var(--spacing-lg);
+    }
+    .pg-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-md);
+      align-items: flex-start;
+    }
+    .pg-swatch {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-medium);
+      border: var(--border-thin) solid var(--border-default);
+    }
+  </style>
+</head>
+<body class="bg-default">
+
+  <div class="dds-header" style="margin-bottom: 0;">
+    <span class="dds-header__brand">DDS Playground</span>
+    <span class="text-small text-secondary">Component visual reference</span>
+  </div>
+
+
+  <!-- =========================================================================
+       COLOR TOKENS
+       ========================================================================= -->
+  <div class="pg-section">
+    <p class="pg-section__title">Color Tokens</p>
+    <div class="pg-row">
+      <div style="text-align:center;">
+        <div class="pg-swatch bg-primary"></div>
+        <p class="text-caption mt-xs">primary</p>
+      </div>
+      <div style="text-align:center;">
+        <div class="pg-swatch bg-success"></div>
+        <p class="text-caption mt-xs">success</p>
+      </div>
+      <div style="text-align:center;">
+        <div class="pg-swatch bg-warning"></div>
+        <p class="text-caption mt-xs">warning</p>
+      </div>
+      <div style="text-align:center;">
+        <div class="pg-swatch bg-error"></div>
+        <p class="text-caption mt-xs">error</p>
+      </div>
+      <div style="text-align:center;">
+        <div class="pg-swatch bg-surface border"></div>
+        <p class="text-caption mt-xs">surface</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       TYPOGRAPHY
+       ========================================================================= -->
+  <div class="pg-section">
+    <p class="pg-section__title">Typography</p>
+    <p class="text-display">Display — 48px Bold</p>
+    <h1>H1 — 36px Bold</h1>
+    <h2>H2 — 30px Semibold</h2>
+    <h3>H3 — 24px Semibold</h3>
+    <h4>H4 — 20px Medium</h4>
+    <p class="text-body mt-sm">Body — 16px Regular. The quick brown fox jumps over the lazy dog.</p>
+    <p class="text-small mt-sm">Small — 14px Regular. The quick brown fox jumps over the lazy dog.</p>
+    <p class="text-caption mt-sm">Caption — 12px Regular. The quick brown fox jumps over the lazy dog.</p>
+  </div>
+
+
+  <!-- =========================================================================
+       BADGES
+       ========================================================================= -->
+  <div class="pg-section">
+    <p class="pg-section__title">Badges</p>
+    <div class="pg-row">
+      <span class="dds-badge dds-badge--primary">Primary</span>
+      <span class="dds-badge dds-badge--success">Success</span>
+      <span class="dds-badge dds-badge--warning">Warning</span>
+      <span class="dds-badge dds-badge--error">Error</span>
+      <span class="dds-badge dds-badge--neutral">Neutral</span>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       CARDS
+       ========================================================================= -->
+  <div class="pg-section">
+    <p class="pg-section__title">Card</p>
+    <div style="max-width: 320px;">
+      <article class="dds-card">
+        <header>
+          <h3 class="text-h4">Card Title</h3>
+        </header>
+        <div class="mt-sm">
+          <p class="text-body text-secondary">Card description or body content goes here.</p>
+        </div>
+        <footer class="mt-md">
+          <span class="dds-badge dds-badge--neutral">Label</span>
+        </footer>
+      </article>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       DIVIDER
+       ========================================================================= -->
+  <div class="pg-section">
+    <p class="pg-section__title">Divider</p>
+    <p class="text-small">Above divider</p>
+    <hr class="dds-divider">
+    <p class="text-small">Below divider (thin)</p>
+    <hr class="dds-divider dds-divider--thick">
+    <p class="text-small">Below divider (thick)</p>
+  </div>
+
+
+  <!-- =========================================================================
+       LEGEND
+       ========================================================================= -->
+  <div class="pg-section">
+    <p class="pg-section__title">Legend</p>
+    <aside class="dds-legend" aria-label="Diagram legend" style="max-width: 480px;">
+      <div class="dds-legend__item">
+        <span class="dds-legend__swatch bg-primary" aria-hidden="true"></span>
+        <span>Primary System</span>
+      </div>
+      <div class="dds-legend__item">
+        <span class="dds-legend__swatch bg-success" aria-hidden="true"></span>
+        <span>Active Service</span>
+      </div>
+      <div class="dds-legend__item">
+        <span class="dds-legend__swatch bg-warning" aria-hidden="true"></span>
+        <span>Deprecated</span>
+      </div>
+      <div class="dds-legend__item">
+        <span class="dds-legend__swatch bg-error" aria-hidden="true"></span>
+        <span>Critical</span>
+      </div>
+    </aside>
+  </div>
+
+
+  <!-- =========================================================================
+       DIAGRAM NODES
+       ========================================================================= -->
+  <div class="pg-section">
+    <p class="pg-section__title">Diagram Nodes</p>
+    <div class="pg-row">
+      <div class="dds-node">
+        <span class="dds-node__label">Default Node</span>
+        <span class="dds-node__description">No variant</span>
+      </div>
+      <div class="dds-node dds-node--primary">
+        <span class="dds-node__label">Primary Node</span>
+        <span class="dds-node__description">Primary variant</span>
+      </div>
+      <div class="dds-node dds-node--success">
+        <span class="dds-node__label">Success Node</span>
+        <span class="dds-node__description">Success variant</span>
+      </div>
+      <div class="dds-node dds-node--warning">
+        <span class="dds-node__label">Warning Node</span>
+        <span class="dds-node__description">Warning variant</span>
+      </div>
+      <div class="dds-node dds-node--error">
+        <span class="dds-node__label">Error Node</span>
+        <span class="dds-node__description">Error variant</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       ELEVATION
+       ========================================================================= -->
+  <div class="pg-section">
+    <p class="pg-section__title">Elevation</p>
+    <div class="pg-row">
+      <div class="dds-card shadow-none" style="width:160px;">
+        <p class="text-small font-semibold">elevation-none</p>
+      </div>
+      <div class="dds-card shadow-sm" style="width:160px;">
+        <p class="text-small font-semibold">elevation-small</p>
+      </div>
+      <div class="dds-card shadow-md" style="width:160px;">
+        <p class="text-small font-semibold">elevation-medium</p>
+      </div>
+      <div class="dds-card shadow-lg" style="width:160px;">
+        <p class="text-small font-semibold">elevation-large</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
