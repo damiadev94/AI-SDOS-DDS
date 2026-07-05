@@ -1,0 +1,24 @@
+<!--
+  Diagram Element: Boundary
+  Purpose:   Define a visible perimeter that separates a distinct scope,
+             system boundary, or trust zone within a diagram.
+  Responsibilities:
+    - Render a labeled bordered region enclosing a set of Nodes or Groups.
+    - Signal a conceptual boundary (e.g. network zone, deployment scope,
+      organizational unit) without defining domain meaning.
+  Non-responsibilities:
+    - Enforce containment logic — positioning is handled per diagram type.
+  Dependencies:
+    - Design Tokens
+  Usage:
+    Compose a boundary by wrapping a dds-group with a dds-node variant
+    that communicates the boundary's semantic role (primary, warning, etc.),
+    or by applying border utilities to a container element.
+-->
+
+<div class="dds-group">
+  <span class="dds-group__label"><!-- PLACEHOLDER: Boundary label -->Boundary</span>
+  <div class="dds-group__content">
+    <!-- SLOT: Nodes or Groups within this boundary -->
+  </div>
+</div>

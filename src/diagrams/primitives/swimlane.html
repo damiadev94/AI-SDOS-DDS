@@ -1,0 +1,25 @@
+<!--
+  Diagram Element: Swimlane
+  Purpose:   Partition a diagram horizontally or vertically into labeled
+             lanes, each representing an actor, role, or system responsible
+             for the activities within that lane.
+  Responsibilities:
+    - Render a row or column labeled with the lane's owner (actor/role).
+    - Contain Nodes positioned within that lane's scope.
+  Non-responsibilities:
+    - Define the semantics of the actors or the flow between them — that
+      belongs to specific Diagram Types (e.g. Sequence, Flow Diagram).
+  Dependencies:
+    - Design Tokens
+  Usage:
+    Compose swimlanes as a vertical stack of dds-group elements, each
+    representing one lane. Use consistent widths and the dds-group__label
+    to identify the lane owner.
+-->
+
+<div class="dds-group">
+  <span class="dds-group__label"><!-- PLACEHOLDER: Lane owner (Actor / Role / System) -->Actor</span>
+  <div class="dds-group__content">
+    <!-- SLOT: Nodes representing activities within this lane -->
+  </div>
+</div>
