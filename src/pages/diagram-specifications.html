@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Framework and patterns for building diagrams in the Design System.">
+  <title>Diagram Specifications — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+
+  <div class="dds-shell">
+
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="index.html" class="dds-header__brand">AI-SDOS DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="index.html" class="dds-header__nav-link">Home</a>
+          <a href="foundation.html" class="dds-header__nav-link">Foundation</a>
+          <a href="design-tokens.html" class="dds-header__nav-link">Tokens</a>
+          <a href="component-library.html" class="dds-header__nav-link">Components</a>
+          <a href="diagram-specifications.html" class="dds-header__nav-link" aria-current="page">Diagrams</a>
+          <a href="templates.html" class="dds-header__nav-link">Templates</a>
+          <a href="roadmap.html" class="dds-header__nav-link">Roadmap</a>
+          <a href="glossary.html" class="dds-header__nav-link">Glossary</a>
+        </nav>
+      </header>
+    </div>
+
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Diagram Specifications</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Framework and patterns for building diagrams in the Design System.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Diagrams</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dds-shell__main">
+      <div class="dds-main">
+
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <section id="diagram-panel">
+            <article class="dds-card dds-diagram-panel">
+
+              <header class="dds-diagram-panel__header">
+                <h2 class="text-h4">Flow Diagram — Source to Output</h2>
+                <span class="dds-badge dds-badge--neutral">Flow</span>
+              </header>
+
+              <div class="dds-diagram-panel__body mt-md">
+                <div class="dds-diagram">
+                  <div class="dds-diagram__canvas" style="display:flex; flex-direction:column; gap:var(--spacing-xl); padding:var(--spacing-xl);">
+                    <div style="display:flex; flex-direction:row; gap:var(--spacing-lg); align-items:center;">
+                      <div class="dds-node">Source</div>
+                      <span class="text-secondary">→</span>
+                      <div class="dds-node dds-node--primary">Process</div>
+                      <span class="text-secondary">→</span>
+                      <div class="dds-node dds-node--success">Output</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="dds-diagram-panel__legend mt-md" aria-label="Diagram legend">
+                <aside class="dds-legend">
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-neutral" aria-hidden="true"></span>
+                    <span>Source — entry point</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-primary" aria-hidden="true"></span>
+                    <span>Process — transformation step</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-success" aria-hidden="true"></span>
+                    <span>Output — result</span>
+                  </div>
+                </aside>
+              </aside>
+
+              <footer class="dds-diagram-panel__notes mt-md">
+                <p class="text-small text-secondary">
+                  The Diagram Framework provides 13 diagram types across 4 categories: Structural, Behavioral, Project, and Conceptual.
+                </p>
+              </footer>
+
+            </article>
+          </section>
+
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Diagram Types</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              The DDS Diagram Library implements 13 diagram types organized across 4 categories.
+              Each diagram type lives in its own standalone HTML file in <code>src/diagram-library/</code>.
+            </p>
+            <table class="mt-md border">
+              <thead>
+                <tr>
+                  <th class="text-small">Name</th>
+                  <th class="text-small">Category</th>
+                  <th class="text-small">File</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-small">Context Diagram</td>
+                  <td class="text-small">Structural</td>
+                  <td class="text-small"><code>context-diagram.html</code></td>
+                </tr>
+                <tr>
+                  <td class="text-small">Container Diagram</td>
+                  <td class="text-small">Structural</td>
+                  <td class="text-small"><code>container-diagram.html</code></td>
+                </tr>
+                <tr>
+                  <td class="text-small">Component Diagram</td>
+                  <td class="text-small">Structural</td>
+                  <td class="text-small"><code>component-diagram.html</code></td>
+                </tr>
+                <tr>
+                  <td class="text-small">Deployment Diagram</td>
+                  <td class="text-small">Structural</td>
+                  <td class="text-small"><code>deployment-diagram.html</code></td>
+                </tr>
+                <tr>
+                  <td class="text-small">Sequence Diagram</td>
+                  <td class="text-small">Behavioral</td>
+                  <td class="text-small"><code>sequence-diagram.html</code></td>
+                </tr>
+                <tr>
+                  <td class="text-small">State Diagram</td>
+                  <td class="text-small">Behavioral</td>
+                  <td class="text-small"><code>state-diagram.html</code></td>
+                </tr>
+                <tr>
+                  <td class="text-small">Flow Diagram</td>
+                  <td class="text-small">Behavioral</td>
+                  <td class="text-small"><code>flow-diagram.html</code></td>
+                </tr>
+                <tr>
+                  <td class="text-small">Decision Tree</td>
+                  <td class="text-small">Behavioral</td>
+                  <td class="text-small"><code>decision-tree.html</code></td>
+                </tr>
+                <tr>
+                  <td class="text-small">Roadmap Diagram</td>
+                  <td class="text-small">Project</td>
+                  <td class="text-small"><code>roadmap-diagram.html</code></td>
+                </tr>
+                <tr>
+                  <td class="text-small">Timeline Diagram</td>
+                  <td class="text-small">Project</td>
+                  <td class="text-small"><code>timeline-diagram.html</code></td>
+                </tr>
+                <tr>
+                  <td class="text-small">Organization Chart</td>
+                  <td class="text-small">Conceptual</td>
+                  <td class="text-small"><code>organization-chart.html</code></td>
+                </tr>
+                <tr>
+                  <td class="text-small">Mind Map</td>
+                  <td class="text-small">Conceptual</td>
+                  <td class="text-small"><code>mind-map.html</code></td>
+                </tr>
+                <tr>
+                  <td class="text-small">Dependency Graph</td>
+                  <td class="text-small">Conceptual</td>
+                  <td class="text-small"><code>dependency-graph.html</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">AI-SDOS DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+
+</body>
+</html>

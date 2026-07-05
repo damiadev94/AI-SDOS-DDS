@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Planned export capabilities for the Design System.">
+  <title>Export System — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+
+  <div class="dds-shell">
+
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="index.html" class="dds-header__brand">AI-SDOS DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="index.html" class="dds-header__nav-link">Home</a>
+          <a href="foundation.html" class="dds-header__nav-link">Foundation</a>
+          <a href="design-tokens.html" class="dds-header__nav-link">Tokens</a>
+          <a href="component-library.html" class="dds-header__nav-link">Components</a>
+          <a href="diagram-specifications.html" class="dds-header__nav-link">Diagrams</a>
+          <a href="templates.html" class="dds-header__nav-link">Templates</a>
+          <a href="roadmap.html" class="dds-header__nav-link">Roadmap</a>
+          <a href="glossary.html" class="dds-header__nav-link">Glossary</a>
+        </nav>
+      </header>
+    </div>
+
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Export System</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Planned export capabilities for the Design System.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Export</span>
+          <span class="dds-badge dds-badge--neutral">Pending</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dds-shell__main">
+      <div class="dds-main dds-main--with-sidebar">
+
+        <aside class="dds-main__sidebar">
+
+          <nav aria-label="Section index">
+            <a href="#overview" class="dds-header__nav-link">Overview</a>
+            <a href="#planned-features" class="dds-header__nav-link">Planned Features</a>
+            <a href="#status" class="dds-header__nav-link">Status</a>
+            <a href="#notes" class="dds-header__nav-link">Notes</a>
+          </nav>
+
+          <div class="mt-xl">
+            <article class="dds-card dds-metadata-panel">
+              <dl class="dds-metadata-panel__list">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Status</dt>
+                  <dd><span class="dds-badge dds-badge--neutral">Pending</span></dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Category</dt>
+                  <dd class="text-small">Export</dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Priority</dt>
+                  <dd class="text-small">Phase 3</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+
+        </aside>
+
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <section id="overview">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Overview</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              The Export System is a planned Phase 3 capability that will provide tooling to output
+              DDS pages and diagrams in portable formats. The goal is to allow stakeholders to receive
+              documentation as standalone PDF files or diagram assets as SVG files, without needing
+              access to the live HTML system. No export functionality is implemented in the current
+              v0.1 release. Browser print-to-PDF is available as a manual workaround via the
+              included <code>print.css</code> layer.
+            </p>
+          </section>
+
+          <section id="planned-features" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Planned Features</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              The following export capabilities are planned for Phase 3 of the project:
+            </p>
+            <table class="mt-md border">
+              <thead>
+                <tr>
+                  <th class="text-small">Feature</th>
+                  <th class="text-small">Format</th>
+                  <th class="text-small">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-small">Page Export</td>
+                  <td class="text-small">HTML</td>
+                  <td class="text-small"><span class="dds-badge dds-badge--neutral">Pending</span></td>
+                </tr>
+                <tr>
+                  <td class="text-small">Print Export</td>
+                  <td class="text-small">PDF via browser</td>
+                  <td class="text-small"><span class="dds-badge dds-badge--neutral">Pending</span></td>
+                </tr>
+                <tr>
+                  <td class="text-small">Diagram Export</td>
+                  <td class="text-small">SVG</td>
+                  <td class="text-small"><span class="dds-badge dds-badge--neutral">Pending</span></td>
+                </tr>
+                <tr>
+                  <td class="text-small">Bundle Export</td>
+                  <td class="text-small">ZIP</td>
+                  <td class="text-small"><span class="dds-badge dds-badge--neutral">Pending</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="status" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Status</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <div class="mt-sm">
+                  <span class="dds-badge dds-badge--neutral">Pending</span>
+                </div>
+                <p class="text-body text-secondary mt-md">
+                  The Export System has not been started. It is scoped for Phase 3, after all
+                  documentation pages and diagram content are complete and stable. The
+                  implementation approach (scripted build step vs. manual browser export) has
+                  not been decided.
+                </p>
+              </div>
+            </article>
+          </section>
+
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">
+                  Until the Export System is implemented, the recommended approach for PDF output is
+                  to use the browser's built-in print dialog (Ctrl+P / Cmd+P) on any DDS page. The
+                  <code>print.css</code> layer is included on every page and optimizes layout and
+                  typography for printed output.
+                </p>
+              </div>
+            </article>
+          </section>
+
+        </main>
+
+      </div>
+    </div>
+
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">AI-SDOS DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+
+</body>
+</html>

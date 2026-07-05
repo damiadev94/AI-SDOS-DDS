@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Base UI components available in the Design System.">
+  <title>Component Library — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+
+  <div class="dds-shell">
+
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="index.html" class="dds-header__brand">AI-SDOS DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="index.html" class="dds-header__nav-link">Home</a>
+          <a href="foundation.html" class="dds-header__nav-link">Foundation</a>
+          <a href="design-tokens.html" class="dds-header__nav-link">Tokens</a>
+          <a href="component-library.html" class="dds-header__nav-link" aria-current="page">Components</a>
+          <a href="diagram-specifications.html" class="dds-header__nav-link">Diagrams</a>
+          <a href="templates.html" class="dds-header__nav-link">Templates</a>
+          <a href="roadmap.html" class="dds-header__nav-link">Roadmap</a>
+          <a href="glossary.html" class="dds-header__nav-link">Glossary</a>
+        </nav>
+      </header>
+    </div>
+
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Component Library</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Base UI components available in the Design System.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Components</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dds-shell__main">
+      <div class="dds-main dds-main--with-sidebar">
+
+        <aside class="dds-main__sidebar">
+
+          <nav aria-label="Section index">
+            <a href="#overview" class="dds-header__nav-link">Overview</a>
+            <a href="#badges" class="dds-header__nav-link">Badges</a>
+            <a href="#cards" class="dds-header__nav-link">Cards</a>
+            <a href="#dividers" class="dds-header__nav-link">Dividers</a>
+            <a href="#legend" class="dds-header__nav-link">Legend</a>
+            <a href="#notes" class="dds-header__nav-link">Notes</a>
+          </nav>
+
+          <div class="mt-xl">
+            <article class="dds-card dds-metadata-panel">
+              <dl class="dds-metadata-panel__list">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Status</dt>
+                  <dd><span class="dds-badge dds-badge--success">Stable</span></dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Components</dt>
+                  <dd class="text-small font-semibold">6</dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Category</dt>
+                  <dd class="text-small">UI Components</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+
+        </aside>
+
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <section id="overview">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Overview</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              The Component Library provides the base UI building blocks used across all DDS pages.
+              Components are implemented as pure HTML elements with BEM-style CSS classes. They
+              reference semantic tokens exclusively and contain no JavaScript. Six components are
+              currently stable: Badge, Card, Divider, Legend, Header, and Footer.
+            </p>
+          </section>
+
+          <section id="badges" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Badges</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Badges communicate status, category, or metadata. Five semantic variants are available.
+            </p>
+            <div class="grid grid-cols-3 gap-lg mt-lg">
+
+              <article class="dds-card">
+                <header class="dds-card__header">
+                  <h3 class="text-h4">Badge Primary</h3>
+                </header>
+                <div class="dds-card__body mt-sm">
+                  <p class="text-body text-secondary">Used for active state, version labels, and primary category.</p>
+                  <div class="mt-md">
+                    <span class="dds-badge dds-badge--primary">Primary</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="dds-card">
+                <header class="dds-card__header">
+                  <h3 class="text-h4">Badge Success</h3>
+                </header>
+                <div class="dds-card__body mt-sm">
+                  <p class="text-body text-secondary">Used for complete status, stable state, and positive outcomes.</p>
+                  <div class="mt-md">
+                    <span class="dds-badge dds-badge--success">Success</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="dds-card">
+                <header class="dds-card__header">
+                  <h3 class="text-h4">Badge Neutral</h3>
+                </header>
+                <div class="dds-card__body mt-sm">
+                  <p class="text-body text-secondary">Used for pending status, draft state, and informational labels.</p>
+                  <div class="mt-md">
+                    <span class="dds-badge dds-badge--neutral">Neutral</span>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </section>
+
+          <section id="cards" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Cards</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Cards are the primary surface for grouping related content. They support optional
+              header, body, and footer sub-elements.
+            </p>
+            <div class="grid grid-cols-2 gap-lg mt-lg">
+
+              <article class="dds-card">
+                <header class="dds-card__header">
+                  <h3 class="text-h4">Card with Header</h3>
+                </header>
+                <div class="dds-card__body mt-sm">
+                  <p class="text-body text-secondary">
+                    A standard card with a header section. Use for titled content blocks,
+                    component showcases, or grouped information.
+                  </p>
+                </div>
+              </article>
+
+              <article class="dds-card">
+                <div class="dds-card__body">
+                  <p class="text-body text-secondary">
+                    A card without a header. Use for notes, supplementary content,
+                    or any block that does not require a title.
+                  </p>
+                </div>
+              </article>
+
+            </div>
+          </section>
+
+          <section id="dividers" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Dividers</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Dividers provide visual separation between sections and list items. They are
+              implemented as <code>hr</code> elements with the <code>dds-divider</code> class.
+            </p>
+            <article class="dds-card mt-lg">
+              <div class="dds-card__body">
+                <p class="text-small text-secondary">Content above the divider</p>
+                <hr class="dds-divider mt-sm">
+                <p class="text-small text-secondary mt-sm">Content below the divider</p>
+              </div>
+            </article>
+          </section>
+
+          <section id="legend" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Legend</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Legends accompany diagrams to explain color and node variants. Each legend item
+              pairs a color swatch with a descriptive label.
+            </p>
+            <article class="dds-card mt-lg">
+              <div class="dds-card__body">
+                <aside class="dds-legend">
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-primary" aria-hidden="true"></span>
+                    <span class="text-small">Primary — active state</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-success" aria-hidden="true"></span>
+                    <span class="text-small">Success — complete state</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-neutral" aria-hidden="true"></span>
+                    <span class="text-small">Neutral — default / pending</span>
+                  </div>
+                </aside>
+              </div>
+            </article>
+          </section>
+
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">
+                  All components are stable and covered by the base CSS layers. Additional
+                  component variants (warning, error) are available for Badges and Status Cards.
+                  See the dashboard template for Status Card usage in context.
+                </p>
+              </div>
+            </article>
+          </section>
+
+        </main>
+
+      </div>
+    </div>
+
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">AI-SDOS DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+
+</body>
+</html>

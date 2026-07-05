@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Implementation phases and delivery status of the Design System.">
+  <title>Project Roadmap — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+
+  <div class="dds-shell">
+
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="index.html" class="dds-header__brand">AI-SDOS DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="index.html" class="dds-header__nav-link">Home</a>
+          <a href="foundation.html" class="dds-header__nav-link">Foundation</a>
+          <a href="design-tokens.html" class="dds-header__nav-link">Tokens</a>
+          <a href="component-library.html" class="dds-header__nav-link">Components</a>
+          <a href="diagram-specifications.html" class="dds-header__nav-link">Diagrams</a>
+          <a href="templates.html" class="dds-header__nav-link">Templates</a>
+          <a href="roadmap.html" class="dds-header__nav-link" aria-current="page">Roadmap</a>
+          <a href="glossary.html" class="dds-header__nav-link">Glossary</a>
+        </nav>
+      </header>
+    </div>
+
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Project Roadmap</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Implementation phases and delivery status of the Design System.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Project</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dds-shell__main">
+      <div class="dds-main">
+
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <section id="diagram-panel">
+            <article class="dds-card dds-diagram-panel">
+
+              <header class="dds-diagram-panel__header">
+                <h2 class="text-h4">DDS Implementation Roadmap</h2>
+                <span class="dds-badge dds-badge--neutral">Roadmap</span>
+              </header>
+
+              <div class="dds-diagram-panel__body mt-md">
+                <div class="dds-diagram">
+                  <div class="dds-diagram__canvas" style="display:flex; flex-direction:column; gap:var(--spacing-xl); padding:var(--spacing-xl);">
+
+                    <!-- Phase 1 -->
+                    <div class="dds-group">
+                      <span class="dds-group__label">Phase 1 — Foundation</span>
+                      <div class="dds-group__content" style="display:flex; flex-direction:row; gap:var(--spacing-md); flex-wrap:wrap;">
+                        <div class="dds-node dds-node--success">
+                          <span class="dds-node__label">Design Tokens</span>
+                          <span class="dds-node__description"><span class="dds-badge dds-badge--success">Complete</span></span>
+                        </div>
+                        <div class="dds-node dds-node--success">
+                          <span class="dds-node__label">CSS Infrastructure</span>
+                          <span class="dds-node__description"><span class="dds-badge dds-badge--success">Complete</span></span>
+                        </div>
+                        <div class="dds-node dds-node--success">
+                          <span class="dds-node__label">Base Components</span>
+                          <span class="dds-node__description"><span class="dds-badge dds-badge--success">Complete</span></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="dds-group">
+                      <span class="dds-group__label">Phase 2 — Library</span>
+                      <div class="dds-group__content" style="display:flex; flex-direction:row; gap:var(--spacing-md); flex-wrap:wrap;">
+                        <div class="dds-node dds-node--success">
+                          <span class="dds-node__label">Diagram Framework</span>
+                          <span class="dds-node__description"><span class="dds-badge dds-badge--success">Complete</span></span>
+                        </div>
+                        <div class="dds-node dds-node--success">
+                          <span class="dds-node__label">Template Library</span>
+                          <span class="dds-node__description"><span class="dds-badge dds-badge--success">Complete</span></span>
+                        </div>
+                        <div class="dds-node dds-node--success">
+                          <span class="dds-node__label">Diagram Library</span>
+                          <span class="dds-node__description"><span class="dds-badge dds-badge--success">Complete</span></span>
+                        </div>
+                        <div class="dds-node dds-node--primary">
+                          <span class="dds-node__label">Documentation Pages</span>
+                          <span class="dds-node__description"><span class="dds-badge dds-badge--primary">In Progress</span></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="dds-group">
+                      <span class="dds-group__label">Phase 3 — Delivery</span>
+                      <div class="dds-group__content" style="display:flex; flex-direction:row; gap:var(--spacing-md); flex-wrap:wrap;">
+                        <div class="dds-node">
+                          <span class="dds-node__label">Export System</span>
+                          <span class="dds-node__description"><span class="dds-badge dds-badge--neutral">Pending</span></span>
+                        </div>
+                        <div class="dds-node">
+                          <span class="dds-node__label">Examples</span>
+                          <span class="dds-node__description"><span class="dds-badge dds-badge--neutral">Pending</span></span>
+                        </div>
+                        <div class="dds-node">
+                          <span class="dds-node__label">Final Review</span>
+                          <span class="dds-node__description"><span class="dds-badge dds-badge--neutral">Pending</span></span>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <aside class="dds-diagram-panel__legend mt-md" aria-label="Diagram legend">
+                <aside class="dds-legend">
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-success" aria-hidden="true"></span>
+                    <span>Complete</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-primary" aria-hidden="true"></span>
+                    <span>In Progress</span>
+                  </div>
+                  <div class="dds-legend__item">
+                    <span class="dds-legend__swatch bg-neutral" aria-hidden="true"></span>
+                    <span>Pending</span>
+                  </div>
+                </aside>
+              </aside>
+
+              <footer class="dds-diagram-panel__notes mt-md">
+                <p class="text-small text-secondary">
+                  The roadmap spans 3 phases. Phases 1 and 2 are substantially complete.
+                  Phase 3 (Delivery) items are pending.
+                </p>
+              </footer>
+
+            </article>
+          </section>
+
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">
+                  The DDS roadmap is organized into three sequential phases. Phase 1 established the
+                  foundation layer: design tokens, CSS infrastructure, and base components. Phase 2
+                  built the library layer: the diagram framework with 13 types, 4 page templates, and
+                  the full diagram library. Phase 3 will complete the delivery layer: the export system
+                  (PDF/SVG output), a comprehensive examples page, and a final system review before
+                  the v1.0 release. Documentation pages (SPEC-008) are the final item completing Phase 2.
+                </p>
+              </div>
+            </article>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">AI-SDOS DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Usage examples demonstrating DDS components and patterns in context.">
+  <title>Examples — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+
+  <div class="dds-shell">
+
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="index.html" class="dds-header__brand">AI-SDOS DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="index.html" class="dds-header__nav-link">Home</a>
+          <a href="foundation.html" class="dds-header__nav-link">Foundation</a>
+          <a href="design-tokens.html" class="dds-header__nav-link">Tokens</a>
+          <a href="component-library.html" class="dds-header__nav-link">Components</a>
+          <a href="diagram-specifications.html" class="dds-header__nav-link">Diagrams</a>
+          <a href="templates.html" class="dds-header__nav-link">Templates</a>
+          <a href="roadmap.html" class="dds-header__nav-link">Roadmap</a>
+          <a href="glossary.html" class="dds-header__nav-link">Glossary</a>
+        </nav>
+      </header>
+    </div>
+
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Examples</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Usage examples demonstrating DDS components and patterns in context.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Examples</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dds-shell__main">
+      <div class="dds-main dds-main--with-sidebar">
+
+        <aside class="dds-main__sidebar">
+
+          <nav aria-label="Section index">
+            <a href="#overview" class="dds-header__nav-link">Overview</a>
+            <a href="#typography" class="dds-header__nav-link">Typography</a>
+            <a href="#components" class="dds-header__nav-link">Components</a>
+            <a href="#layout-patterns" class="dds-header__nav-link">Layout Patterns</a>
+            <a href="#notes" class="dds-header__nav-link">Notes</a>
+          </nav>
+
+          <div class="mt-xl">
+            <article class="dds-card dds-metadata-panel">
+              <dl class="dds-metadata-panel__list">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Status</dt>
+                  <dd><span class="dds-badge dds-badge--warning">Draft</span></dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Category</dt>
+                  <dd class="text-small">Examples</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+
+        </aside>
+
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <section id="overview">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Overview</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              This page demonstrates DDS components, typography, and layout patterns in context.
+              Each section shows a rendered example alongside the classes and structure used to
+              produce it. Use these examples as a reference when composing new documentation pages
+              or adapting existing templates.
+            </p>
+          </section>
+
+          <section id="typography" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Typography</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              The type scale provides six levels of text hierarchy. Apply them via utility classes
+              to maintain visual consistency across all pages.
+            </p>
+            <article class="dds-card mt-lg">
+              <div class="dds-card__body">
+                <h1 class="text-h2">Heading 1 — text-h2</h1>
+                <h2 class="text-h3 mt-sm">Heading 2 — text-h3</h2>
+                <h3 class="text-h4 mt-sm">Heading 3 — text-h4</h3>
+                <p class="text-body mt-sm">Body text — text-body. Used for descriptive paragraphs and main content blocks.</p>
+                <p class="text-small mt-sm text-secondary">Small text — text-small. Used for supplementary information, table cells, and code references.</p>
+                <p class="text-caption mt-sm text-secondary">Caption text — text-caption. Used for metadata labels, timestamps, and field identifiers.</p>
+              </div>
+            </article>
+          </section>
+
+          <section id="components" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Components</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              The base component set covers the most common UI needs across documentation pages.
+            </p>
+            <div class="grid grid-cols-2 gap-lg mt-lg">
+
+              <article class="dds-card">
+                <header class="dds-card__header">
+                  <h3 class="text-h4">Badges</h3>
+                </header>
+                <div class="dds-card__body mt-sm">
+                  <p class="text-small text-secondary">Five semantic variants:</p>
+                  <div class="mt-md">
+                    <span class="dds-badge dds-badge--primary">Primary</span>
+                    <span class="dds-badge dds-badge--success">Success</span>
+                    <span class="dds-badge dds-badge--warning">Warning</span>
+                    <span class="dds-badge dds-badge--error">Error</span>
+                    <span class="dds-badge dds-badge--neutral">Neutral</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="dds-card">
+                <header class="dds-card__header">
+                  <h3 class="text-h4">Divider + Legend</h3>
+                </header>
+                <div class="dds-card__body mt-sm">
+                  <p class="text-small text-secondary">Horizontal separator:</p>
+                  <hr class="dds-divider mt-sm">
+                  <p class="text-small text-secondary mt-sm">Legend example:</p>
+                  <aside class="dds-legend mt-sm">
+                    <div class="dds-legend__item">
+                      <span class="dds-legend__swatch bg-success" aria-hidden="true"></span>
+                      <span class="text-small">Complete</span>
+                    </div>
+                    <div class="dds-legend__item">
+                      <span class="dds-legend__swatch bg-primary" aria-hidden="true"></span>
+                      <span class="text-small">In Progress</span>
+                    </div>
+                  </aside>
+                </div>
+              </article>
+
+            </div>
+          </section>
+
+          <section id="layout-patterns" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Layout Patterns</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              The grid utility classes enable multi-column layouts for cards, widgets, and panels.
+              This example shows a two-column metadata-plus-content composition.
+            </p>
+            <article class="dds-card mt-lg">
+              <div class="dds-card__body">
+                <div class="grid grid-cols-2 gap-md">
+                  <div>
+                    <article class="dds-card dds-metadata-panel">
+                      <dl class="dds-metadata-panel__list">
+                        <div class="dds-metadata-panel__item">
+                          <dt class="text-caption text-secondary">Version</dt>
+                          <dd class="text-small">v0.1</dd>
+                        </div>
+                        <hr class="dds-divider">
+                        <div class="dds-metadata-panel__item">
+                          <dt class="text-caption text-secondary">Status</dt>
+                          <dd><span class="dds-badge dds-badge--success">Stable</span></dd>
+                        </div>
+                      </dl>
+                    </article>
+                  </div>
+                  <div>
+                    <p class="text-body text-secondary">
+                      Content area alongside the metadata panel. This two-column pattern is used in
+                      all documentation template pages. The sidebar contains the metadata panel and
+                      the main column holds the document sections.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">
+                  This page is in Draft status. Additional examples covering diagram patterns,
+                  status cards, and dashboard widget usage will be added in a subsequent revision.
+                </p>
+              </div>
+            </article>
+          </section>
+
+        </main>
+
+      </div>
+    </div>
+
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">AI-SDOS DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+
+</body>
+</html>

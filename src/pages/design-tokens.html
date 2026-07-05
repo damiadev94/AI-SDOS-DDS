@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Primitive and semantic token definitions that power the visual system.">
+  <title>Design Tokens — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+
+  <div class="dds-shell">
+
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="index.html" class="dds-header__brand">AI-SDOS DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="index.html" class="dds-header__nav-link">Home</a>
+          <a href="foundation.html" class="dds-header__nav-link">Foundation</a>
+          <a href="design-tokens.html" class="dds-header__nav-link" aria-current="page">Tokens</a>
+          <a href="component-library.html" class="dds-header__nav-link">Components</a>
+          <a href="diagram-specifications.html" class="dds-header__nav-link">Diagrams</a>
+          <a href="templates.html" class="dds-header__nav-link">Templates</a>
+          <a href="roadmap.html" class="dds-header__nav-link">Roadmap</a>
+          <a href="glossary.html" class="dds-header__nav-link">Glossary</a>
+        </nav>
+      </header>
+    </div>
+
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Design Tokens</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Primitive and semantic token definitions that power the visual system.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Tokens</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dds-shell__main">
+      <div class="dds-main dds-main--with-sidebar">
+
+        <aside class="dds-main__sidebar">
+
+          <nav aria-label="Section index">
+            <a href="#overview" class="dds-header__nav-link">Overview</a>
+            <a href="#primitive-tokens" class="dds-header__nav-link">Primitive Tokens</a>
+            <a href="#semantic-tokens" class="dds-header__nav-link">Semantic Tokens</a>
+            <a href="#usage" class="dds-header__nav-link">Usage</a>
+            <a href="#notes" class="dds-header__nav-link">Notes</a>
+          </nav>
+
+          <div class="mt-xl">
+            <article class="dds-card dds-metadata-panel">
+              <dl class="dds-metadata-panel__list">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Status</dt>
+                  <dd><span class="dds-badge dds-badge--success">Stable</span></dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">File</dt>
+                  <dd class="text-small">tokens.css</dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Category</dt>
+                  <dd class="text-small">Foundation</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+
+        </aside>
+
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <section id="overview">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Overview</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Design tokens are the foundational variables that store every visual decision in the system —
+              colors, typography, spacing, sizing, border radius, and motion. They are organized into two
+              tiers: primitive tokens that hold raw values, and semantic tokens that express intent.
+              All tokens are implemented as CSS custom properties in <code>tokens.css</code> and are
+              available globally across every page in the system.
+            </p>
+          </section>
+
+          <section id="primitive-tokens" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Primitive Tokens</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Primitive tokens store raw design values. They are the source of truth for every
+              visual property but must never be used directly in component styles.
+            </p>
+            <table class="mt-md border">
+              <thead>
+                <tr>
+                  <th class="text-small">Category</th>
+                  <th class="text-small">Examples</th>
+                  <th class="text-small">Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-small">Color</td>
+                  <td class="text-small"><code>--color-blue-500</code>, <code>--color-gray-100</code></td>
+                  <td class="text-small">12</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Typography</td>
+                  <td class="text-small"><code>--font-size-sm</code>, <code>--line-height-base</code></td>
+                  <td class="text-small">8</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Spacing</td>
+                  <td class="text-small"><code>--space-4</code>, <code>--space-8</code>, <code>--space-16</code></td>
+                  <td class="text-small">8</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Sizing</td>
+                  <td class="text-small"><code>--size-icon-sm</code>, <code>--size-node-w</code></td>
+                  <td class="text-small">6</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Radius</td>
+                  <td class="text-small"><code>--radius-sm</code>, <code>--radius-md</code>, <code>--radius-full</code></td>
+                  <td class="text-small">5</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Motion</td>
+                  <td class="text-small"><code>--duration-fast</code>, <code>--easing-default</code></td>
+                  <td class="text-small">4</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="semantic-tokens" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Semantic Tokens</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Semantic tokens map primitive values to meaningful roles. Components must reference
+              only semantic tokens — never raw primitives.
+            </p>
+            <table class="mt-md border">
+              <thead>
+                <tr>
+                  <th class="text-small">Token Group</th>
+                  <th class="text-small">Prefix</th>
+                  <th class="text-small">Usage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-small">Text</td>
+                  <td class="text-small"><code>--text-*</code></td>
+                  <td class="text-small">Foreground color for text elements at different emphasis levels.</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Background</td>
+                  <td class="text-small"><code>--background-*</code></td>
+                  <td class="text-small">Surface colors for page, cards, panels, and overlays.</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Border</td>
+                  <td class="text-small"><code>--border-*</code></td>
+                  <td class="text-small">Stroke colors for dividers, card borders, and input outlines.</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Font</td>
+                  <td class="text-small"><code>--font-*</code></td>
+                  <td class="text-small">Font family, weight, size, and line-height for the type scale.</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Spacing</td>
+                  <td class="text-small"><code>--spacing-*</code></td>
+                  <td class="text-small">Margin, padding, and gap values for layout and components.</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Radius</td>
+                  <td class="text-small"><code>--radius-*</code></td>
+                  <td class="text-small">Border radius for cards, badges, nodes, and other elements.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="usage" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Usage</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Primitive tokens hold raw values such as a specific hex color or a pixel measurement.
+              Semantic tokens reference those primitives and give them meaning — for example,
+              <code>--text-primary</code> maps to the appropriate primitive color token for the
+              default text color. This two-tier approach means that if the base color palette changes,
+              only the primitive values need updating; all semantic references remain intact.
+            </p>
+            <p class="text-body mt-md">
+              <strong>Rule:</strong> Components must only reference Semantic Tokens.
+              Never use Primitive Tokens directly in component styles.
+            </p>
+          </section>
+
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">
+                  All tokens are defined in <code>tokens.css</code> at the <code>:root</code> level,
+                  making them available globally. The token file must be loaded second in the CSS
+                  import order, immediately after <code>reset.css</code> and before any layer that
+                  consumes token values.
+                </p>
+              </div>
+            </article>
+          </section>
+
+        </main>
+
+      </div>
+    </div>
+
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">AI-SDOS DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+
+</body>
+</html>

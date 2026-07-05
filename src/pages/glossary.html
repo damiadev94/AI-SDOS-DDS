@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Definitions for terms used throughout the Design System.">
+  <title>Glossary — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+
+  <div class="dds-shell">
+
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="index.html" class="dds-header__brand">AI-SDOS DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="index.html" class="dds-header__nav-link">Home</a>
+          <a href="foundation.html" class="dds-header__nav-link">Foundation</a>
+          <a href="design-tokens.html" class="dds-header__nav-link">Tokens</a>
+          <a href="component-library.html" class="dds-header__nav-link">Components</a>
+          <a href="diagram-specifications.html" class="dds-header__nav-link">Diagrams</a>
+          <a href="templates.html" class="dds-header__nav-link">Templates</a>
+          <a href="roadmap.html" class="dds-header__nav-link">Roadmap</a>
+          <a href="glossary.html" class="dds-header__nav-link" aria-current="page">Glossary</a>
+        </nav>
+      </header>
+    </div>
+
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Glossary</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Definitions for terms used throughout the Design System.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Reference</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dds-shell__main">
+      <div class="dds-main dds-main--with-sidebar">
+
+        <aside class="dds-main__sidebar">
+
+          <nav aria-label="Reference index">
+            <a href="#term-component" class="dds-header__nav-link">A–D</a>
+            <a href="#term-export-system" class="dds-header__nav-link">E–P</a>
+            <a href="#term-semantic-token" class="dds-header__nav-link">S–T</a>
+            <a href="#notes" class="dds-header__nav-link">Notes</a>
+          </nav>
+
+          <div class="mt-xl">
+            <article class="dds-card dds-metadata-panel">
+              <dl class="dds-metadata-panel__list">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Status</dt>
+                  <dd><span class="dds-badge dds-badge--success">Stable</span></dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Entries</dt>
+                  <dd class="text-small font-semibold">~12</dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Category</dt>
+                  <dd class="text-small">Reference</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+
+        </aside>
+
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <!-- A–D -->
+
+          <section id="term-component">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Component</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--primary">UI</span>
+            </div>
+            <p class="text-body mt-md">
+              A reusable HTML and CSS building block that encapsulates a specific UI pattern.
+              Components in the DDS are implemented as pure HTML elements styled via BEM class names.
+              They contain no JavaScript and reference only semantic tokens.
+            </p>
+            <p class="text-small text-secondary mt-md">
+              Related: Pattern, Template, Design Token
+            </p>
+          </section>
+
+          <hr class="dds-divider mt-lg">
+
+          <section id="term-design-token" class="mt-lg">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Design Token</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--primary">Foundation</span>
+            </div>
+            <p class="text-body mt-md">
+              A named CSS custom property that stores a design decision — such as a color value,
+              spacing unit, or font size. Tokens abstract raw values from their usage, enabling
+              consistent theming and easier system-wide updates.
+            </p>
+            <p class="text-small text-secondary mt-md">
+              Related: Primitive Token, Semantic Token, tokens.css
+            </p>
+          </section>
+
+          <hr class="dds-divider mt-lg">
+
+          <section id="term-dds" class="mt-lg">
+            <div class="dds-section-header">
+              <h2 class="text-h2">DDS</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--neutral">Acronym</span>
+            </div>
+            <p class="text-body mt-md">
+              Documentation Design System. The full name of this project: a static, framework-free
+              design system for producing technical documentation, architectural diagrams, and
+              reference catalogs using HTML, CSS, and SVG only.
+            </p>
+            <p class="text-small text-secondary mt-md">
+              Related: Shell, Template, Foundation
+            </p>
+          </section>
+
+          <hr class="dds-divider mt-lg">
+
+          <section id="term-diagram-framework" class="mt-lg">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Diagram Framework</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--primary">Diagrams</span>
+            </div>
+            <p class="text-body mt-md">
+              The CSS and SVG system that provides classes and primitives for rendering technical
+              diagrams. It includes node variants, group containers, connector styles, legend
+              components, and the diagram panel layout. Implemented in <code>diagrams.css</code>.
+            </p>
+            <p class="text-small text-secondary mt-md">
+              Related: Component, DDS, Template
+            </p>
+          </section>
+
+          <!-- E–P -->
+
+          <hr class="dds-divider mt-lg">
+
+          <section id="term-export-system" class="mt-lg">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Export System</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--neutral">Planned</span>
+            </div>
+            <p class="text-body mt-md">
+              Planned tooling (Phase 3) to output DDS pages as PDF files and diagrams as standalone
+              SVG assets. Not yet implemented. Manual browser print-to-PDF is available as an interim
+              solution via the included <code>print.css</code> layer.
+            </p>
+            <p class="text-small text-secondary mt-md">
+              Related: Foundation, Template
+            </p>
+          </section>
+
+          <hr class="dds-divider mt-lg">
+
+          <section id="term-foundation" class="mt-lg">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Foundation</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--primary">Layer</span>
+            </div>
+            <p class="text-body mt-md">
+              The base layer of the DDS CSS stack. Comprises the reset, design tokens, and
+              typography files. Every other CSS layer and component depends on the Foundation
+              being loaded first.
+            </p>
+            <p class="text-small text-secondary mt-md">
+              Related: Design Token, DDS, Typography
+            </p>
+          </section>
+
+          <hr class="dds-divider mt-lg">
+
+          <section id="term-pattern" class="mt-lg">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Pattern</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--primary">UI</span>
+            </div>
+            <p class="text-body mt-md">
+              A reusable composition of components that solves a recurring layout or content problem.
+              Examples in the DDS include the Hero pattern, Metadata Panel pattern, and Section
+              Header pattern. Patterns are documented in <code>src/patterns/</code>.
+            </p>
+            <p class="text-small text-secondary mt-md">
+              Related: Component, Template
+            </p>
+          </section>
+
+          <hr class="dds-divider mt-lg">
+
+          <section id="term-primitive-token" class="mt-lg">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Primitive Token</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--primary">Foundation</span>
+            </div>
+            <p class="text-body mt-md">
+              A raw design value stored as a CSS custom property — for example, a specific hex color
+              code or a pixel measurement. Primitive tokens are the source of truth for all visual
+              values but must never be referenced directly in component styles. Use semantic tokens
+              instead.
+            </p>
+            <p class="text-small text-secondary mt-md">
+              Related: Semantic Token, Design Token
+            </p>
+          </section>
+
+          <!-- S–T -->
+
+          <hr class="dds-divider mt-lg">
+
+          <section id="term-semantic-token" class="mt-lg">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Semantic Token</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--primary">Foundation</span>
+            </div>
+            <p class="text-body mt-md">
+              A token that expresses design intent rather than a raw value. For example,
+              <code>--text-primary</code> communicates the role (primary text color) while its
+              actual value references a primitive token. Components must only use semantic tokens.
+            </p>
+            <p class="text-small text-secondary mt-md">
+              Related: Primitive Token, Design Token, Component
+            </p>
+          </section>
+
+          <hr class="dds-divider mt-lg">
+
+          <section id="term-shell" class="mt-lg">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Shell</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--primary">Layout</span>
+            </div>
+            <p class="text-body mt-md">
+              The <code>dds-shell</code> element is the outermost layout wrapper present on every
+              DDS page. It defines the page structure using named slots for the header, hero, main
+              content, and footer regions, and provides consistent vertical rhythm across all templates.
+            </p>
+            <p class="text-small text-secondary mt-md">
+              Related: Template, Foundation, Layout
+            </p>
+          </section>
+
+          <hr class="dds-divider mt-lg">
+
+          <section id="term-template" class="mt-lg">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Template</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--primary">Structure</span>
+            </div>
+            <p class="text-body mt-md">
+              A page-level HTML structure designed for a specific document type. Templates in the DDS
+              compose the shell, header, hero, main, and footer into a complete, ready-to-use page.
+              Four templates are available: Documentation, Dashboard, Diagram, and Reference.
+            </p>
+            <p class="text-small text-secondary mt-md">
+              Related: Shell, Pattern, Component
+            </p>
+          </section>
+
+          <hr class="dds-divider mt-lg">
+
+          <section id="term-typography" class="mt-lg">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Typography</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <div class="mt-md">
+              <span class="dds-badge dds-badge--primary">Foundation</span>
+            </div>
+            <p class="text-body mt-md">
+              The type scale and text styling system for the DDS. Defined in <code>typography.css</code>,
+              it establishes font family, heading hierarchy (h1–h4), body text, small text, and caption
+              styles. All typography references semantic font tokens.
+            </p>
+            <p class="text-small text-secondary mt-md">
+              Related: Foundation, Design Token, Semantic Token
+            </p>
+          </section>
+
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">
+                  This glossary covers the core vocabulary of the AI-SDOS Documentation Design System.
+                  Terms are organized alphabetically. Additional entries will be added as the system
+                  evolves toward v1.0.
+                </p>
+              </div>
+            </article>
+          </section>
+
+        </main>
+
+      </div>
+    </div>
+
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">AI-SDOS DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Core principles and architectural decisions of the Design System.">
+  <title>Foundation — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+
+  <div class="dds-shell">
+
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="index.html" class="dds-header__brand">AI-SDOS DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="index.html" class="dds-header__nav-link">Home</a>
+          <a href="foundation.html" class="dds-header__nav-link" aria-current="page">Foundation</a>
+          <a href="design-tokens.html" class="dds-header__nav-link">Tokens</a>
+          <a href="component-library.html" class="dds-header__nav-link">Components</a>
+          <a href="diagram-specifications.html" class="dds-header__nav-link">Diagrams</a>
+          <a href="templates.html" class="dds-header__nav-link">Templates</a>
+          <a href="roadmap.html" class="dds-header__nav-link">Roadmap</a>
+          <a href="glossary.html" class="dds-header__nav-link">Glossary</a>
+        </nav>
+      </header>
+    </div>
+
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Foundation</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Core principles and architectural decisions of the Design System.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Core</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dds-shell__main">
+      <div class="dds-main dds-main--with-sidebar">
+
+        <aside class="dds-main__sidebar">
+
+          <nav aria-label="Section index">
+            <a href="#overview" class="dds-header__nav-link">Overview</a>
+            <a href="#principles" class="dds-header__nav-link">Principles</a>
+            <a href="#architecture" class="dds-header__nav-link">Architecture</a>
+            <a href="#conventions" class="dds-header__nav-link">Conventions</a>
+            <a href="#notes" class="dds-header__nav-link">Notes</a>
+          </nav>
+
+          <div class="mt-xl">
+            <article class="dds-card dds-metadata-panel">
+              <dl class="dds-metadata-panel__list">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Status</dt>
+                  <dd><span class="dds-badge dds-badge--success">Stable</span></dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Version</dt>
+                  <dd class="text-small font-semibold">v0.1</dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Category</dt>
+                  <dd class="text-small">Foundation</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+
+        </aside>
+
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <section id="overview">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Overview</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              The AI-SDOS Documentation Design System (DDS) is a static, framework-free design system built
+              entirely with HTML, CSS, and inline SVG. It provides a consistent visual language for producing
+              technical documentation, architectural diagrams, and reference catalogs without requiring
+              JavaScript, build tools, or external dependencies. Every page in the system works standalone
+              by opening the HTML file directly in a browser.
+            </p>
+          </section>
+
+          <section id="principles" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Principles</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Four non-negotiable constraints shape every decision in the system:
+            </p>
+            <ul class="mt-md">
+              <li class="text-body mt-sm">
+                <strong>Semantic Tokens Only</strong> — Components reference semantic CSS custom properties
+                (e.g., <code>--text-primary</code>), never raw primitive values. This ensures consistent
+                theming and future-proofs the system against token value changes.
+              </li>
+              <li class="text-body mt-sm">
+                <strong>No JavaScript</strong> — All interactivity is achieved through CSS and HTML alone.
+                No scripts, no event listeners, no dynamic state. Pages are fully static.
+              </li>
+              <li class="text-body mt-sm">
+                <strong>No Frameworks</strong> — Zero runtime dependencies. No React, Vue, or any CSS
+                framework. The CSS layer is authored entirely in-house and is fully self-contained.
+              </li>
+              <li class="text-body mt-sm">
+                <strong>Print-ready</strong> — All pages include a dedicated <code>print.css</code> layer
+                that produces clean, formatted output when printed or exported via the browser print dialog.
+              </li>
+            </ul>
+          </section>
+
+          <section id="architecture" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Architecture</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              The CSS stack is organized into ordered layers. Each layer builds on the previous
+              and must be loaded in the sequence below.
+            </p>
+            <table class="mt-md border">
+              <thead>
+                <tr>
+                  <th class="text-small">Layer</th>
+                  <th class="text-small">File</th>
+                  <th class="text-small">Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-small">1 — Reset</td>
+                  <td class="text-small"><code>reset.css</code></td>
+                  <td class="text-small">Normalizes browser defaults and establishes a clean baseline.</td>
+                </tr>
+                <tr>
+                  <td class="text-small">2 — Tokens</td>
+                  <td class="text-small"><code>tokens.css</code></td>
+                  <td class="text-small">Defines all CSS custom properties (primitive and semantic).</td>
+                </tr>
+                <tr>
+                  <td class="text-small">3 — Typography</td>
+                  <td class="text-small"><code>typography.css</code></td>
+                  <td class="text-small">Font stack, scale, line-height, and heading styles.</td>
+                </tr>
+                <tr>
+                  <td class="text-small">4 — Layout</td>
+                  <td class="text-small"><code>layout.css</code></td>
+                  <td class="text-small">Shell, header, hero, main, sidebar, and footer structures.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="conventions" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Conventions</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Naming and structural conventions applied consistently across the system:
+            </p>
+            <ul class="mt-md">
+              <li class="text-body mt-sm"><strong>BEM-style class naming</strong> — <code>dds-block__element--modifier</code></li>
+              <li class="text-body mt-sm"><strong>All classes prefixed with <code>dds-</code></strong> — prevents collisions with third-party CSS</li>
+              <li class="text-body mt-sm"><strong>Utility classes are unprefixed</strong> — e.g., <code>mt-md</code>, <code>text-secondary</code>, <code>grid-cols-3</code></li>
+              <li class="text-body mt-sm"><strong>No inline styles</strong> — except for absolute-positioned SVG diagram nodes (<code>position:absolute; top:Xpx; left:Xpx</code>)</li>
+              <li class="text-body mt-sm"><strong>Semantic HTML elements</strong> — <code>header</code>, <code>main</code>, <code>aside</code>, <code>nav</code>, <code>footer</code>, <code>section</code>, <code>article</code></li>
+            </ul>
+          </section>
+
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">
+                  The Foundation layer is stable and unlikely to change. Any modifications to reset, tokens,
+                  or the CSS layer order will propagate across the entire system and require full regression
+                  testing across all templates and diagram types.
+                </p>
+              </div>
+            </article>
+          </section>
+
+        </main>
+
+      </div>
+    </div>
+
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">AI-SDOS DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+
+</body>
+</html>

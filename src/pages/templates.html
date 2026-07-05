@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reusable HTML page structures that compose the DDS.">
+  <title>Templates — DDS</title>
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/diagrams.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body class="bg-default">
+
+  <div class="dds-shell">
+
+    <div class="dds-shell__header">
+      <header class="dds-header" role="banner">
+        <a href="index.html" class="dds-header__brand">AI-SDOS DDS</a>
+        <nav class="dds-header__nav" aria-label="Primary navigation">
+          <a href="index.html" class="dds-header__nav-link">Home</a>
+          <a href="foundation.html" class="dds-header__nav-link">Foundation</a>
+          <a href="design-tokens.html" class="dds-header__nav-link">Tokens</a>
+          <a href="component-library.html" class="dds-header__nav-link">Components</a>
+          <a href="diagram-specifications.html" class="dds-header__nav-link">Diagrams</a>
+          <a href="templates.html" class="dds-header__nav-link" aria-current="page">Templates</a>
+          <a href="roadmap.html" class="dds-header__nav-link">Roadmap</a>
+          <a href="glossary.html" class="dds-header__nav-link">Glossary</a>
+        </nav>
+      </header>
+    </div>
+
+    <div class="dds-shell__hero p-xl">
+      <div class="dds-hero">
+        <h1 class="dds-hero__title">Templates</h1>
+        <p class="dds-hero__description text-body text-secondary mt-sm">
+          Reusable HTML page structures that compose the DDS.
+        </p>
+        <div class="dds-hero__meta mt-md">
+          <span class="dds-badge dds-badge--primary">Templates</span>
+          <span class="dds-badge dds-badge--neutral">v0.1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dds-shell__main">
+      <div class="dds-main dds-main--with-sidebar">
+
+        <aside class="dds-main__sidebar">
+
+          <nav aria-label="Section index">
+            <a href="#overview" class="dds-header__nav-link">Overview</a>
+            <a href="#documentation" class="dds-header__nav-link">Documentation Template</a>
+            <a href="#dashboard" class="dds-header__nav-link">Dashboard Template</a>
+            <a href="#diagram" class="dds-header__nav-link">Diagram Template</a>
+            <a href="#reference" class="dds-header__nav-link">Reference Template</a>
+            <a href="#notes" class="dds-header__nav-link">Notes</a>
+          </nav>
+
+          <div class="mt-xl">
+            <article class="dds-card dds-metadata-panel">
+              <dl class="dds-metadata-panel__list">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Status</dt>
+                  <dd><span class="dds-badge dds-badge--success">Stable</span></dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Templates</dt>
+                  <dd class="text-small font-semibold">4</dd>
+                </div>
+                <hr class="dds-divider">
+                <div class="dds-metadata-panel__item">
+                  <dt class="text-caption text-secondary">Category</dt>
+                  <dd class="text-small">Structure</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+
+        </aside>
+
+        <main class="dds-main__content" role="main" id="main-content">
+
+          <section id="overview">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Overview</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Templates are page-level HTML structures that define the layout and section composition
+              for a specific type of document. Each template combines the shell layout, header, hero,
+              main content area, sidebar (where applicable), and footer into a complete, ready-to-use
+              page structure. Four templates are available: Documentation, Dashboard, Diagram, and Reference.
+              All templates are located in <code>src/templates/</code>.
+            </p>
+          </section>
+
+          <section id="documentation" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Documentation Template</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Standard template for technical documentation pages. Includes a sidebar with
+              table of contents navigation and a metadata panel.
+            </p>
+            <table class="mt-md border">
+              <thead>
+                <tr>
+                  <th class="text-small">Feature</th>
+                  <th class="text-small">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-small">Layout</td>
+                  <td class="text-small">Two-column with sidebar</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Sidebar</td>
+                  <td class="text-small">TOC navigation + metadata panel</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Use Case</td>
+                  <td class="text-small">Specs, guides, reference docs, API documentation</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Status</td>
+                  <td class="text-small">Stable</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="dashboard" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Dashboard Template</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Overview template for summarized project or system state. Full-width layout with
+              metric widgets and status cards. No sidebar.
+            </p>
+            <table class="mt-md border">
+              <thead>
+                <tr>
+                  <th class="text-small">Feature</th>
+                  <th class="text-small">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-small">Layout</td>
+                  <td class="text-small">Full-width, single column</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Sidebar</td>
+                  <td class="text-small">None</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Use Case</td>
+                  <td class="text-small">Project dashboards, system overviews, status hubs</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Status</td>
+                  <td class="text-small">Stable</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="diagram" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Diagram Template</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Full-page template for complex visualizations and architectural diagrams. Full-width
+              layout centered on the diagram panel. No sidebar. Loads <code>diagrams.css</code>.
+            </p>
+            <table class="mt-md border">
+              <thead>
+                <tr>
+                  <th class="text-small">Feature</th>
+                  <th class="text-small">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-small">Layout</td>
+                  <td class="text-small">Full-width, diagram-centered</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Sidebar</td>
+                  <td class="text-small">None</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Use Case</td>
+                  <td class="text-small">Architecture diagrams, roadmaps, flow charts</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Status</td>
+                  <td class="text-small">Stable</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="reference" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Reference Template</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <p class="text-body mt-md">
+              Lookup and catalog template for glossaries, component references, and token catalogs.
+              Uses a sidebar for alphabetical or category-based index navigation.
+            </p>
+            <table class="mt-md border">
+              <thead>
+                <tr>
+                  <th class="text-small">Feature</th>
+                  <th class="text-small">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-small">Layout</td>
+                  <td class="text-small">Two-column with sidebar</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Sidebar</td>
+                  <td class="text-small">Alphabetical or category index</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Use Case</td>
+                  <td class="text-small">Glossaries, token catalogs, component references</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Status</td>
+                  <td class="text-small">Stable</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="notes" class="mt-xl">
+            <div class="dds-section-header">
+              <h2 class="text-h2">Notes</h2>
+              <hr class="dds-divider mt-sm">
+            </div>
+            <article class="dds-card mt-md">
+              <div class="dds-card__body">
+                <p class="text-body text-secondary">
+                  All templates use the same CSS import stack. The Diagram template additionally
+                  loads <code>diagrams.css</code> for the diagram framework classes. Templates are
+                  starter files — copy the relevant template and replace placeholder content to
+                  create a new page in the system.
+                </p>
+              </div>
+            </article>
+          </section>
+
+        </main>
+
+      </div>
+    </div>
+
+    <div class="dds-shell__footer">
+      <footer class="dds-footer" role="contentinfo">
+        <span class="dds-footer__meta">AI-SDOS DDS — v0.1</span>
+        <span class="dds-footer__info">2026</span>
+      </footer>
+    </div>
+
+  </div>
+
+</body>
+</html>
