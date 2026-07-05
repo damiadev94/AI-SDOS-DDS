@@ -157,3 +157,99 @@
   font-size: var(--font-size-small);
   color: var(--text-secondary);
 }
+
+
+/* =============================================================================
+   PATTERNS
+   Compositions of the components above. Only layout glue lives here — no new
+   visual primitives are introduced.
+   ============================================================================= */
+
+/* ---------------------------------------------------------------------------
+   Hero
+   --------------------------------------------------------------------------- */
+
+.dds-hero__title {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+.dds-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+
+/* ---------------------------------------------------------------------------
+   Metadata Panel
+   --------------------------------------------------------------------------- */
+
+.dds-metadata-panel__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.dds-metadata-panel__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+
+/* ---------------------------------------------------------------------------
+   Status Card
+   --------------------------------------------------------------------------- */
+
+.dds-status-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.dds-status-card--success {
+  border-left: var(--border-width-thick) solid var(--color-success);
+}
+
+.dds-status-card--warning {
+  border-left: var(--border-width-thick) solid var(--color-warning);
+}
+
+.dds-status-card--error {
+  border-left: var(--border-width-thick) solid var(--color-error);
+}
+
+
+/* ---------------------------------------------------------------------------
+   Diagram Panel
+   --------------------------------------------------------------------------- */
+
+.dds-diagram-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ---------------------------------------------------------------------------
+   Section Header
+   --------------------------------------------------------------------------- */
+
+.dds-section-header {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ---------------------------------------------------------------------------
+   Dashboard Widget
+   --------------------------------------------------------------------------- */
+
+.dds-dashboard-widget__value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}

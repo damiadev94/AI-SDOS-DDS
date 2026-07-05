@@ -1,0 +1,33 @@
+<!--
+  Pattern: Hero
+  Purpose:   Introduce a document visually with a title, description and metadata.
+  Composition:
+    - Title
+    - Description
+    - Metadata (status/version badges)
+  Dependencies:
+    - Badge component
+    - Design Tokens
+  Variants:
+    - dds-hero--compact: reduced vertical spacing for shorter documents.
+-->
+
+<div class="dds-hero">
+
+  <h1 class="dds-hero__title">
+    <!-- PLACEHOLDER: Document title -->
+    Document Title
+  </h1>
+
+  <p class="dds-hero__description text-body text-secondary mt-sm">
+    <!-- PLACEHOLDER: Document description -->
+    A short description introducing the purpose of this document.
+  </p>
+
+  <div class="dds-hero__meta mt-md">
+    <!-- PLACEHOLDER: Status / version badges -->
+    <span class="dds-badge dds-badge--primary">v0.1</span>
+    <span class="dds-badge dds-badge--neutral">Draft</span>
+  </div>
+
+</div>

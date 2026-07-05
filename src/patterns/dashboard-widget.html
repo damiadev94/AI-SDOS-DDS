@@ -1,0 +1,34 @@
+<!--
+  Pattern: Dashboard Widget
+  Purpose:   Summarize a single metric or piece of status information for a
+             dashboard.
+  Composition:
+    - Card
+    - Badge
+    - Metadata
+  Dependencies:
+    - Card component
+    - Badge component
+    - Design Tokens
+  Variants:
+    - dds-dashboard-widget--compact: reduced padding.
+-->
+
+<article class="dds-card dds-dashboard-widget">
+
+  <p class="text-caption text-secondary">
+    <!-- PLACEHOLDER: Metric label -->
+    Metric Label
+  </p>
+
+  <p class="dds-dashboard-widget__value mt-xs">
+    <!-- PLACEHOLDER: Metric value -->
+    12
+  </p>
+
+  <span class="dds-badge dds-badge--neutral mt-sm">
+    <!-- PLACEHOLDER: Trend / status -->
+    +2 this week
+  </span>
+
+</article>

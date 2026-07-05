@@ -1,0 +1,50 @@
+<!--
+  Pattern: Metadata Panel
+  Purpose:   Display contextual document metadata such as version, status,
+             authorship and dates.
+  Composition:
+    - Card
+    - Badge
+    - Divider
+  Dependencies:
+    - Card component
+    - Badge component
+    - Divider component
+    - Design Tokens
+  Variants:
+    - dds-metadata-panel--compact: single-row layout for inline use.
+-->
+
+<article class="dds-card dds-metadata-panel">
+
+  <dl class="dds-metadata-panel__list">
+
+    <div class="dds-metadata-panel__item">
+      <dt class="text-caption text-secondary">Version</dt>
+      <dd class="text-small font-semibold"><!-- PLACEHOLDER: Version --> v0.1</dd>
+    </div>
+
+    <hr class="dds-divider">
+
+    <div class="dds-metadata-panel__item">
+      <dt class="text-caption text-secondary">Status</dt>
+      <dd><span class="dds-badge dds-badge--neutral"><!-- PLACEHOLDER: Status -->Draft</span></dd>
+    </div>
+
+    <hr class="dds-divider">
+
+    <div class="dds-metadata-panel__item">
+      <dt class="text-caption text-secondary">Author</dt>
+      <dd class="text-small"><!-- PLACEHOLDER: Author --></dd>
+    </div>
+
+    <hr class="dds-divider">
+
+    <div class="dds-metadata-panel__item">
+      <dt class="text-caption text-secondary">Last Updated</dt>
+      <dd class="text-small"><!-- PLACEHOLDER: Date --></dd>
+    </div>
+
+  </dl>
+
+</article>

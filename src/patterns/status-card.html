@@ -1,0 +1,31 @@
+<!--
+  Pattern: Status Card
+  Purpose:   Represent the current state of a project element (phase, area,
+             milestone).
+  Composition:
+    - Card
+    - Badge
+    - Title
+  Dependencies:
+    - Card component
+    - Badge component
+    - Design Tokens
+  Variants:
+    - dds-status-card--success
+    - dds-status-card--warning
+    - dds-status-card--error
+-->
+
+<article class="dds-card dds-status-card">
+
+  <div class="dds-status-card__header">
+    <h4 class="text-h4"><!-- PLACEHOLDER: Item name -->Item Name</h4>
+    <span class="dds-badge dds-badge--success"><!-- PLACEHOLDER: Status label -->Complete</span>
+  </div>
+
+  <p class="text-body text-secondary mt-sm">
+    <!-- PLACEHOLDER: Status description -->
+    Short note describing the current state of this item.
+  </p>
+
+</article>

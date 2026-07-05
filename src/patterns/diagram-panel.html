@@ -1,0 +1,44 @@
+<!--
+  Pattern: Diagram Panel
+  Purpose:   Standard container for presenting a diagram alongside its title,
+             legend and notes. Does not implement diagram infrastructure
+             itself — that is the responsibility of the Diagram Framework.
+  Composition:
+    - Card
+    - Title
+    - Legend
+    - Notes
+  Dependencies:
+    - Card component
+    - Legend component
+    - Design Tokens
+  Variants:
+    - dds-diagram-panel--compact: reduced padding.
+-->
+
+<article class="dds-card dds-diagram-panel">
+
+  <header class="dds-diagram-panel__header">
+    <h3 class="text-h4"><!-- PLACEHOLDER: Diagram title -->Diagram Title</h3>
+  </header>
+
+  <div class="dds-diagram-panel__body mt-md">
+    <!-- PLACEHOLDER: Diagram content slot -->
+  </div>
+
+  <aside class="dds-diagram-panel__legend mt-md" aria-label="Diagram legend">
+    <div class="dds-legend">
+      <div class="dds-legend__item">
+        <span class="dds-legend__swatch bg-primary" aria-hidden="true"></span>
+        <span><!-- PLACEHOLDER: Legend label --></span>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="dds-diagram-panel__notes mt-md">
+    <p class="text-small text-secondary">
+      <!-- PLACEHOLDER: Notes or annotations -->
+    </p>
+  </footer>
+
+</article>
